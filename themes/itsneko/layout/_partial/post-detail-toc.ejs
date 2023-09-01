@@ -103,7 +103,7 @@
 
 <div class="row">
     <% if (page.tags && page.tags.length) { %>
-    <% page.tags.forEach(function(tag) { %>
+    <% page.tags.data.forEach(function(tag) { %>
         <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="<%= tag.name %>">
             <%- partial('_partial/post-detail.ejs') %>
         </div>
@@ -111,7 +111,7 @@
         <% } %>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <% if (page.tags && page.tags.length) { %>
-        <% page.tags.forEach(function(tag) { %>
+        <% page.tags.data.forEach(function(tag) { %>
         <div class="toc-widget" data-spmid="<%= tag.name %>">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
@@ -125,7 +125,7 @@
 </div>
 
 <!-- TOC 悬浮按钮. -->
-<% if (theme.toc.enable && theme.toc.showToggleBtn) { %>
+<% if (theme.toc.enable && theme.toc.showToggleBtn && page.tags) { %>
     <% page.tags.forEach(function(tag) { %>
 <div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="<%= tag.name %>">
     <a class="btn-floating btn-large bg-color">
