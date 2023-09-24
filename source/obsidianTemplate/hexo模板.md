@@ -1,12 +1,11 @@
 ---
 title: {{title}}
-abstracts: 
-feature: false
+description:
 date: {{date}}
+updated: {{date}}
 tags:
 categories:
-cover: 
-author: author-seven
+photos: 
 ---
 
 待完善...

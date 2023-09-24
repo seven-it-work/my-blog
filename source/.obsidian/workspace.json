@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "_posts/win/obsidian/obsidian插件（一）模板使用.md",
                 "mode": "source",
                 "source": true
               }
@@ -32,7 +32,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "_posts/win/obsidian/obsidian插件（一）模板使用.md",
                 "mode": "preview",
                 "source": true
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "_posts/win/obsidian/obsidian插件（一）模板使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "_posts/win/obsidian/obsidian插件（一）模板使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md"
+                "file": "_posts/win/obsidian/obsidian插件（一）模板使用.md"
               }
             }
           }
@@ -169,21 +169,29 @@
   },
   "active": "372a9384f4963597",
   "lastOpenFiles": [
+    "_posts/win/obsidian/obsidian安装.md",
+    "_posts/win/obsidian/obsidian插件（一）模板使用.md",
+    "tags/index.md",
+    "_posts/win/obsidian/obsidian.md~",
+    "obsidianTemplate/hexo模板.md~",
+    "_posts/win/utools.md~",
+    "my-todo/index.md",
+    "categories/index.md",
+    "about/index.md",
+    "about/index-1.md",
+    "_posts/win/Snipaste.md",
+    "_posts/win/utools.md",
     "obsidianTemplate/hexo模板.md",
-    "_posts/win/obsidian/obsidian模板使用.md",
     "随机命名.md",
     "obsidianTemplate/hexo-Aurora 折叠板.md",
     "obsidianTemplate/hexo-Aurora 危险.md",
     "obsidianTemplate/hexo-Aurora 提醒.md",
     "obsidianTemplate/hexo-Aurora 警告.md",
-    "_posts/win/Snipaste.md",
-    "_posts/win/obsidian/obsidian.md",
     "_posts/hello-world.md",
     "obsidianTemplate/index 1.md",
     "obsidianTemplate",
     " obsidian-template/hexo模板.md",
     " obsidian-template/index 1.md",
-    "my-todo/index.md",
     " obsidian-template"
   ]
 }

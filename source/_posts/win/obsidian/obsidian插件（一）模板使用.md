@@ -1,15 +1,13 @@
 ---
 title: obsidian模板使用
-abstracts: 关于Obsidian官方插件模板的使用心得
-feature: false
+description: 关于Obsidian官方插件模板的使用心得
 date: 2023-09-23 10:49:08
 tags:
-  - "#Obsidian"
-  - "#Obsidian插件"
+  - Obsidian插件
 categories:
-  - "#Obsidian"
-cover: 
-author: author-seven
+  - win软件
+  - Obsidian
+photos:
 ---
 
 # 设置
