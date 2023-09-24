@@ -1,12 +1,13 @@
 ---
-title: obsidian模板使用
+title: obsidian插件（一）模板使用
 description: 关于Obsidian官方插件模板的使用心得
-date: 2023-09-23 10:49:08
 tags:
   - Obsidian插件
 categories:
   - win软件
   - Obsidian
+abbrlink: 54bdaaa
+date: 2023-09-23 10:49:08
 photos:
 ---
 

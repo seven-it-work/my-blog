@@ -14,11 +14,14 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://seven.gitee.io/
-permalink: :year/:month/:day/:title/
+permalink: :abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+abbrlink:
+  alg: crc32
+  rep: hex
 
 # Directory
 source_dir: source
@@ -46,7 +49,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
