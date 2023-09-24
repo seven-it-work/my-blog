@@ -23,6 +23,7 @@ function requestPost(url, callback, params, id) {
 
 function getDataFromApi(id, i, gen) {
   // todo 加入缓存
+
   var v = document.getElementById(id).getAttribute("v");
   var a = document.getElementById(id).getAttribute("a");
   var l = document.getElementById(id).getAttribute("loc");
@@ -63,7 +64,9 @@ function updateOnPage(data, id) {
       elementById.style.background=``
       // 修改背景
       const wPng=elementById.innerHTML.match(/https.*?\.jpg/g)
-      document.getElementsByClassName('header')[0].style.background=`url(${wPng})`
+      if (wPng){
+        document.getElementsByClassName('header')[0].style.background=`url(${wPng})`
+      }
     }
     if (data.a.hasOwnProperty("style")) {
       document.getElementById(id).style.cssText = data.a.style
@@ -87,10 +90,12 @@ function updateOnPage(data, id) {
 }
 
 function updateWidget(id, gen) {
+  // 特定样式，防止没有加载出来时看不见标题
+  document.getElementsByClassName('header')[0].style.backgroundColor=`#000000`
+
   if (gen === 1) {
     loadingToggle(id, 1)
   }
   collectData(id, gen)
 }
-
 updateWidget('ww_4b54bde5f3d24', 0);
