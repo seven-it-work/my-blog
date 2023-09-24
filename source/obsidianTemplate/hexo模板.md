@@ -1,12 +1,12 @@
 ---
 title: {{title}}
-abstracts: 
-feature: false
+description: 描述
+excerpt: 摘要
 date: {{date}}
-tags:
-categories:
-cover: 
-author: author-seven
+tags: 
+categories: 
+photos: 
+comments: true
 ---
 
 待完善...

@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "d478353833869b21",
+    "id": "57f9ffedc5d6fb97",
     "type": "split",
     "children": [
       {
-        "id": "04b4c904203716f3",
+        "id": "3b0a940fa1329eb2",
         "type": "tabs",
         "children": [
           {
-            "id": "cf195ba5c78c5b05",
+            "id": "8b512eb9ec8edbf5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/win/obsidian/obsidian.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,11 +25,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7bf82b443ab4d1d0",
+    "id": "9e39bb7de3be1744",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "2fef87fbdd66aae1",
+        "id": "c2ad3374ac454a36",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -39,7 +39,7 @@
         }
       },
       {
-        "id": "46c68cb09ae9aa1a",
+        "id": "5c7582c4fb06d9a9",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -54,7 +54,7 @@
         }
       },
       {
-        "id": "6b0b9cf0079675a0",
+        "id": "62badd3f62a29289",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -65,7 +65,7 @@
         }
       },
       {
-        "id": "368f97da9a703457",
+        "id": "31fde861b52c5fee",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -76,16 +76,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "4aa7e26b96987aa3",
+    "id": "4d1e7de80ad39b12",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "562c19043e1b31e3",
+        "id": "ad912981866444ef",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "source/_posts/hello-world.md",
+            "file": "source/_posts/win/obsidian/obsidian.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,24 +97,24 @@
         }
       },
       {
-        "id": "407685f4917ee33d",
+        "id": "33670e57f10a17b9",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "source/_posts/hello-world.md",
+            "file": "source/_posts/win/obsidian/obsidian.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "32389cc2dee0a8ae",
+        "id": "6bba2c01e627a6a1",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "source/_posts/hello-world.md"
+            "file": "source/_posts/win/obsidian/obsidian.md"
           }
         }
       }
@@ -131,6 +131,32 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cf195ba5c78c5b05",
-  "lastOpenFiles": []
+  "active": "8b512eb9ec8edbf5",
+  "lastOpenFiles": [
+    "db.json",
+    "public/lib/Han/dist/han.css",
+    "public/lib/Han/dist/han.js",
+    "public/lib/Han/dist/han.min.css",
+    "public/lib/Han/dist/han.min.js",
+    "public/lib/fastclick/LICENSE",
+    "public/lib/Han/dist/font/han-space.woff",
+    "public/lib/Han/dist/font/han.woff2",
+    "public/lib/Han/dist/font/han.woff",
+    "public/lib/Han/dist/font/han.otf",
+    "public/lib/Han/dist/font/han-space.otf",
+    "public/images/searchicon.png",
+    "public/images/quote-l.svg",
+    "public/images/favicon-16x16-next.png",
+    "public/images/quote-r.svg",
+    "public/images/favicon-32x32-next.png",
+    "public/images/placeholder.gif",
+    "public/images/logo.svg",
+    "public/images/loading.gif",
+    "public/images/cc-by.svg",
+    "public/images/cc-by-nd.svg",
+    "source/_posts/win/obsidian/obsidian模板使用.md",
+    "source/_posts/win/Snipaste.md",
+    "source/_posts/win/utools.md",
+    "source/_posts/hello-world.md"
+  ]
 }

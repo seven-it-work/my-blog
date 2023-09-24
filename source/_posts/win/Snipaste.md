@@ -1,6 +1,6 @@
 ---
 title: Snipaste
-abstracts: Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！下载并打开 Snipaste，按下 `F1` 来开始截图，再按 `F3`，截图就在桌面置顶显示了。就这么简单！
+description: Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！下载并打开 Snipaste，按下 `F1` 来开始截图，再按 `F3`，截图就在桌面置顶显示了。就这么简单！
 feature: false
 date: 2023-09-23 11:02:21
 tags:

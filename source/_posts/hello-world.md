@@ -1,6 +1,6 @@
 ---
 title: Hello World
-abstracts: 对于文章的一个简介.
+description: 对于文章的一个简介.
 feature: false
 date: 2020-08-15 18:49:36
 tags:
@@ -9,6 +9,7 @@ categories:
     - Cate
 cover: https://yjl-img.oss-cn-beijing.aliyuncs.com/%E4%B8%83%E4%BD%B3logo.png
 author: author-seven
+
 ---
   
 :::tip

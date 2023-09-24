@@ -1,6 +1,6 @@
 ---
 title: obsidian模板使用
-abstracts: 关于Obsidian官方插件模板的使用心得
+description: 关于Obsidian官方插件模板的使用心得
 feature: false
 date: 2023-09-23 10:49:08
 tags:
