@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Snipaste</title>
+    <url>/my-blog/108dcde3/</url>
+    <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>官网地址：<span class="exturl" data-url="aHR0cHM6Ly96aC5zbmlwYXN0ZS5jb20v">https://zh.snipaste.com/<i class="fa fa-external-link-alt"></i></span><br>64位beta版：<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5zbmlwYXN0ZS5jb20vYXJjaGl2ZXMvU25pcGFzdGUtMi44LjYtQmV0YS14NjQuemlw">https://download.snipaste.com/archives/Snipaste-2.8.6-Beta-x64.zip<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>截图F1<br>截图完成后按F3，进行贴图</p>
+<ul>
+<li>支持将剪贴板中的以下内容转为图片<ul>
+<li>图像</li>
+<li>纯文本</li>
+<li>HTML 文本</li>
+<li>颜色信息</li>
+<li>图像文件：PNG, JPG, BMP, ICO, <strong>GIF</strong> 等</li>
+</ul>
+</li>
+<li>图片窗口支持的操作<ul>
+<li>缩放 (<code>鼠标滚轮</code> 或者 <code>+</code>&#x2F;<code>-</code>)<br>  对于 GIF 图片则是加速&#x2F;减速</li>
+<li>旋转 (<code>1</code>&#x2F;<code>2</code>)<br>  对于 GIF 图片则是 上一帧&#x2F;下一帧</li>
+<li>镜像翻转 (<code>3</code>&#x2F;<code>4</code>)</li>
+<li>设置透明度 (<code>Ctrl</code> + <code>鼠标滚轮</code> 或者 <code>Ctrl</code> + <code>+</code>&#x2F;<code>-</code>)</li>
+<li>鼠标穿透</li>
+<li>缩略图 (<code>Shift</code> + <code>双击</code>)</li>
+<li>图像标注 (<code>空格键</code>)</li>
+<li>隐藏 (<code>左键双击</code>)</li>
+<li>…</li>
+</ul>
+</li>
+<li>取色 (<code>Alt</code>)</li>
+<li>文件拖放</li>
+<li><strong>贴图分组</strong></li>
+<li><strong>自动备份、恢复</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>win软件</category>
+      </categories>
+      <tags>
+        <tag>效率工具</tag>
+        <tag>新机必装</tag>
+        <tag>截图工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>uTools</title>
+    <url>/my-blog/7343bbf/</url>
+    <content><![CDATA[<video  controls>
+    <source src="https://res.u-tools.cn/website/v4/utools-4-video.mp4" type="video/mp4">
+</video>
+]]></content>
+      <categories>
+        <category>win软件</category>
+      </categories>
+      <tags>
+        <tag>效率工具</tag>
+        <tag>新机必装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>obsidian安装</title>
+    <url>/my-blog/54d29936/</url>
+    <content><![CDATA[<p>待完善…</p>
+]]></content>
+      <categories>
+        <category>win软件</category>
+        <category>Obsidian</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>开发必备</tag>
+        <tag>Obsidian</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>obsidian插件（一）模板使用</title>
+    <url>/my-blog/54bdaaa/</url>
+    <content><![CDATA[<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p><img src="https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20230923113519.png" alt="image.png"><br><img src="https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20230923113602.png" alt="image.png"></p>
+<ol>
+<li>开启模板开关（默认开启的）</li>
+<li>创建模板文件夹<br> 这里创建个obsidianTemplate</li>
+</ol>
+<div class="note primary">
+            <p>模板文件夹命名不能有<code>-</code>字符</p>
+          </div>
+
+<ol start="3">
+<li>输入date 和 time 的语法，在模板中<code>&#123;&#123;date&#125;&#125;</code>和<code>&#123;&#123;time&#125;&#125;</code>会自动给你转换。类似的语法还有一下：<ul>
+<li><code>&#123;&#123;title&#125;&#125;</code></li>
+</ul>
+</li>
+</ol>
+<p>我这里的模板eg：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123;title&#125;&#125;</span><br><span class="line">abstracts: </span><br><span class="line">feature: false</span><br><span class="line">date: &#123;&#123;date&#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">cover: </span><br><span class="line"><span class="section">author: author-seven</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">待完善...</span><br></pre></td></tr></table></figure>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>创建一个新的md<br><img src="https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20230923114547.png" alt="image.png"><br>插入模板<br><img src="https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20230923114618.png" alt="image.png"><br><img src="https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20230923114730.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>win软件</category>
+        <category>Obsidian</category>
+      </categories>
+      <tags>
+        <tag>Obsidian插件</tag>
+      </tags>
+  </entry>
+</search>
