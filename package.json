@@ -28,6 +28,7 @@
     "hexo-server": "^3.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-landscape": "^1.0.0",
+    "live2d-widget-model-wanko": "^1.0.5",
     "nunjucks": "^3.2.4",
     "swig": "^1.4.2",
     "vite": "^4.4.9"

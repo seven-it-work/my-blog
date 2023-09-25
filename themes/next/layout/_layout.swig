@@ -5,6 +5,12 @@
   {{ partial('_partials/head/head.swig', {}, {cache: theme.cache.enable}) }}
   {% include '_partials/head/head-unique.swig' %}
   {{- next_inject('head') }}
+<!-- 加载宠物看板 -->
+  <script>
+    var live2d_path = `{{- url_for('/js/live2d-widge/') }}`;
+  </script>
+  <script src="{{- url_for('/js/live2d-widge/autoload.js') }}"></script>
+  <!-- 加载宠物看板 -->
 
   <title>{% block title %}{% endblock %}</title>
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
