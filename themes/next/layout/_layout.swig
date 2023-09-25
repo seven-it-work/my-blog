@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config.language }}">
 <head>
+  {{- next_js('my_utils.js') }}
   {{ partial('_partials/head/head.swig', {}, {cache: theme.cache.enable}) }}
   {% include '_partials/head/head-unique.swig' %}
   {{- next_inject('head') }}

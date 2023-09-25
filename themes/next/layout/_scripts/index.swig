@@ -1,5 +1,4 @@
 {% include 'vendors.swig' %}
-{{- next_js('my_utils.js') }}
 {{- next_js('utils.js') }}
 {%- if theme.motion.enable %}
   {{- next_js('motion.js') }}
