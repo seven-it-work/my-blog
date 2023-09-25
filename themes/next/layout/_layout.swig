@@ -64,9 +64,11 @@
       {{ partial('_third-party/statistics/index.swig', {}, {cache: theme.cache.enable}) }}
     </div>
     <!--   小人组件   -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <canvas style="width: 100%;height: 60%" id="canvasPeopleMove"></canvas>
-    <script src="{{- url_for('/js/peopleMove.js') }}"></script>
+    <div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+      <canvas style="width: 100%;height: 500px;" id="canvasPeopleMove"></canvas>
+      <script src="{{- url_for('/js/peopleMove.js') }}"></script>
+    </div>
     <!--   小人组件   -->
   </footer>
 </div>
