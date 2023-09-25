@@ -1,6 +1,3 @@
-console.clear()
-console.log('lsakdfalskjdflnksd')
-
 const config = {
   src: 'https://yjl-img.oss-cn-beijing.aliyuncs.com/open-peeps-sheet.png',
   rows: 15,

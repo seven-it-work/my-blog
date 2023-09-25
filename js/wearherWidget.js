@@ -1,7 +1,8 @@
-function requestGet(url, callback, id, gen) {
+function requestGetIp(url, callback, id, gen) {
   var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
   request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+      CacheUtils.addCacheOnlyToday('ip', request.responseText)
       callback(id, request.responseText, gen)
     }
   };
@@ -9,10 +10,11 @@ function requestGet(url, callback, id, gen) {
   request.send()
 }
 
-function requestPost(url, callback, params, id) {
+function requestPostWeather(url, callback, params, id,ip) {
   var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
   request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+      // CacheUtils.setWithExpires(ip, request.responseText,60*60*24*1000)
       callback(request.responseText, id)
     }
   };
@@ -22,31 +24,39 @@ function requestPost(url, callback, params, id) {
 }
 
 function getDataFromApi(id, i, gen) {
-  // todo 加入缓存
-
-  var v = document.getElementById(id).getAttribute("v");
-  var a = document.getElementById(id).getAttribute("a");
-  var l = document.getElementById(id).getAttribute("loc");
-  var u = document.getElementById(id + '_u').getAttribute("href") + '|||' + document.getElementById(id + '_u').innerHTML;
-  if (gen == 1) {
-    var ub = ''
-  } else {
-    var ub = document.getElementById(id).innerHTML
+  const weatherInfo = CacheUtils.getWithExpires(i);
+  if (weatherInfo){
+    updateOnPage(weatherInfo,id)
+  }else {
+    var v = document.getElementById(id).getAttribute("v");
+    var a = document.getElementById(id).getAttribute("a");
+    var l = document.getElementById(id).getAttribute("loc");
+    var u = document.getElementById(id + '_u').getAttribute("href") + '|||' + document.getElementById(id + '_u').innerHTML;
+    if (gen == 1) {
+      var ub = ''
+    } else {
+      var ub = document.getElementById(id).innerHTML
+    }
+    var i = i;
+    var g = gen;
+    // 必须有，否则请求失败
+    ub = ub.replace('天气加载中...', '天气插件')
+    u = u.replace('天气加载中...', '天气插件')
+    var params = 'v=' + v + '&a=' + a + '&l=' + l + '&u=' + u + '&ub=' + ub + '&i=' + i + '&g=' + g + '&id=' + id;
+    requestPostWeather('https://app2.weatherwidget.org/data/', updateOnPage, params, id,i)
   }
-  var i = i;
-  var g = gen;
-  // 必须有，否则请求失败
-  ub = ub.replace('天气加载中...', '天气插件')
-  u = u.replace('天气加载中...', '天气插件')
-  var params = 'v=' + v + '&a=' + a + '&l=' + l + '&u=' + u + '&ub=' + ub + '&i=' + i + '&g=' + g + '&id=' + id;
-  requestPost('https://app2.weatherwidget.org/data/', updateOnPage, params, id)
 }
 
 function collectData(id, gen) {
-  if (document.getElementById(id).getAttribute("loc") === 'auto') {
-    requestGet('https://ip.weatherwidget.org/', getDataFromApi, id, gen)
+  const ipInfo = CacheUtils.getCacheOnlyToday('ip');
+  if (ipInfo) {
+    getDataFromApi(id, ipInfo, gen)
   } else {
-    getDataFromApi(id, !1, gen)
+    if (document.getElementById(id).getAttribute("loc") === 'auto') {
+      requestGetIp('https://ip.weatherwidget.org/', getDataFromApi, id, gen)
+    } else {
+      getDataFromApi(id, !1, gen)
+    }
   }
 }
 
@@ -61,11 +71,11 @@ function updateOnPage(data, id) {
       document.getElementById(id).innerHTML = data.a.html
       const elementById = document.getElementById(id);
       // 自定义样式
-      elementById.style.background=``
+      elementById.style.background = ``
       // 修改背景
-      const wPng=elementById.innerHTML.match(/https.*?\.jpg/g)
-      if (wPng){
-        document.getElementsByClassName('header')[0].style.background=`url(${wPng})`
+      const wPng = elementById.innerHTML.match(/https.*?\.jpg/g)
+      if (wPng) {
+        document.getElementsByClassName('header')[0].style.background = `url(${wPng})`
       }
     }
     if (data.a.hasOwnProperty("style")) {
@@ -91,11 +101,12 @@ function updateOnPage(data, id) {
 
 function updateWidget(id, gen) {
   // 特定样式，防止没有加载出来时看不见标题
-  document.getElementsByClassName('header')[0].style.backgroundColor=`#000000`
+  document.getElementsByClassName('header')[0].style.backgroundColor = `#000000`
 
   if (gen === 1) {
     loadingToggle(id, 1)
   }
   collectData(id, gen)
 }
+
 updateWidget('ww_4b54bde5f3d24', 0);
