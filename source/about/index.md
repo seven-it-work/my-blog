@@ -3,7 +3,7 @@ title: 个人介绍
 date: 2023-09-23 09:38:38
 type: about
 ---
-
+{% html7 %}
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
@@ -201,4 +201,4 @@ type: about
 <!--        <div class="row">References Available Upon Request</div>-->
 <!--    </article>-->
 </div>
-
+{% endhtml7 %}
