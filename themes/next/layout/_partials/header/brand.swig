@@ -16,11 +16,15 @@
       </div>
     {%- endif %}
 
-    <a href="{{ config.root }}" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">{{ title }}</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+<!--    <a href="{{ config.root }}" class="brand" rel="start">-->
+<!--      <span class="logo-line-before"><i></i></span>-->
+<!--      <h1 class="site-title">{{ title }}</h1>-->
+<!--      <span class="logo-line-after"><i></i></span>-->
+<!--    </a>-->
+<!--  自定义logo样式1  -->
+    {{ partial('_partials/header/logoStyle1.swig', {}, {cache: theme.cache.enable}) }}
+<!--  自定义logo样式  -->
+
     {%- if subtitle %}
       <p class="site-subtitle" itemprop="description">{{ subtitle }}</p>
     {%- endif %}
