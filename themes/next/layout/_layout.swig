@@ -19,9 +19,12 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
-  <div class="headband"></div>
-
+<!-- 还不知道有什么用，一长串黑色的 -->
+<!--  <div class="headband"></div>-->
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <!-- 左上角图片 一般节假日什么的 -->
+    <img style="width: auto;position: absolute;top: 0;left: 0;z-index: 9999;" src="{{- url_for('/images/739924dd0dc8e2a37f14d6403cf72acd_134x24.png') }}"/>
+    <!-- 左上角图片 一般节假日什么的 -->
     <!--   天气组件   -->
     <div id="ww_4b54bde5f3d24" v='1.3' loc='auto'
          a='{"t":"responsive","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
@@ -51,6 +54,10 @@
   {{ partial('_partials/widgets.swig', {}, {cache: theme.cache.enable}) }}
 
   <main class="main">
+<!--  gitHub贡献 日历组件  -->
+  <div id="github_container"></div>
+  <script src="{{- url_for('/js/github-calendar/githubcalendar.js') }}"></script>
+<!--  gitHub贡献 日历组件 -->
     <div class="main-inner">
       <div class="content-wrap">
         {% include '_partials/header/sub-menu.swig' %}
