@@ -2,6 +2,20 @@
 // --------------------------------------------------
 .header {
   background: $head-bg;
+  // 适配wave 波浪
+  line-height 0;
+  // 背景图片延迟渲染的过渡特性
+  opacity: 0;
+  background-size: cover;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+// 背景图片延迟渲染的过渡特性
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .header-inner {
