@@ -23,7 +23,6 @@ function addEveryDayStr(str) {
 //遍历设置为span，定时span的属性中加入动画，
   for (let i = 0; i < str_split.length; i++) {
     setTimeout(() => {
-      console.log(str_split[i])
       const p = document.createElement("span");
       p.classList.add('every-dat-animation');
       p.innerText = str_split[i];
