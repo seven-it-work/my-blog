@@ -132,12 +132,19 @@ function addFadeInBackground(url, element) {
       offset: 1,
       opacity: 1
     }
-  ],{
+  ], {
     duration: 3000,
     easing: 'linear',
     delay: 0,
     iterations: 1,
     direction: 'normal',
     fill: 'none'
-  });
+  })
+  let isSet = false
+   element.addEventListener("animationend", function (e) {
+    if (!isSet) {
+      getEveryDayStr()
+      isSet = true
+    }
+  }, false);
 }
