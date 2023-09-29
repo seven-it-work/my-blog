@@ -125,23 +125,19 @@ function addFadeInBackground(url, element) {
   }
   element.animate([
     {
-      backgroundPosition: "0 0",
-      width: "0%",
-      height: "0%",
-      offset: 0
+      offset: 0,
+      opacity: 0
     },
     {
-      backgroundPosition: "100% 100%",
-      width: "100%",
-      height: "100%",
-      offset: 1
-    },
+      offset: 1,
+      opacity: 1
+    }
   ],{
     duration: 3000,
     easing: 'linear',
     delay: 0,
     iterations: 1,
     direction: 'normal',
-    fill: 'forwards'
+    fill: 'none'
   });
 }
