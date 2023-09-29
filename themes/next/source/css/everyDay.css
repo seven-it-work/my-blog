@@ -6,14 +6,24 @@
 
 #every-dat-text {
   padding: 20px;
+  font-weight: bold;
+  background: #fff -webkit-radial-gradient(
+    circle,
+    #1d694b,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ) no-repeat -280px -94px;
+  -webkit-background-clip: text;
+  -webkit-background-size: 388px;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-animation: everyDayLight 6s linear infinite;
 }
-
-@keyframes ani {
+@keyframes everyDayLight {
   from {
     background-position: -280px -94px;
   }
   to {
-    background-position: 680px -94px;
+    background-position: 150% -94px;
   }
 }
 

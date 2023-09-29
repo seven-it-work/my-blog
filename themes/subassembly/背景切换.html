@@ -6,37 +6,49 @@
 </head>
 <style>
     body {
+        font-family: arial;
         background: #1a1a1a;
-        background-repeat: no-repeat;
-
-        animation-name:picchange;
-        animation-duration: 5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode:both;
     }
 
-    @keyframes picchange {
-        0% {
-            background-image: linear-gradient(#1a1a1a,#0cb54f);
+    #every-dat-text {
+        padding: 20px;
+        font-weight: bold;
+        background: #fff -webkit-radial-gradient(
+                circle,
+                #1d694b,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0)
+        ) no-repeat -280px -94px;
+        -webkit-background-clip: text;
+        -webkit-background-size: 388px;
+        color: rgba(255, 255, 255, 0.1);
+        -webkit-animation: everyDayLight 3s linear infinite;
+    }
+
+    @keyframes everyDayLight {
+        from {
+            background-position: -280px -94px;
         }
-        100% {
-            background-image: url("https://picsum.photos/id/586/800/600");
+        to {
+            background-position: 150% -94px;
         }
     }
+
 </style>
 <body>
-<script>
-    // setTimeout(()=>{
-    //     var background = new Image();
-    //     background.src = 'https://obsidian.md/images/screenshot-1.0-hero-combo.png';
-    //     background.onload = function () {
-    //         console.log('Background load complete!');
-    //         var loadbackground = document.body;
-    //         loadbackground.style.backgroundImage = 'url(' + background.src + ')';
-    //         loadbackground.style.animationName = 'gradientChange';
-    //     }
-    // },1000)
-</script>
+<div>xxxxxxxxxx</div>
+<div id="every-dat-text">
+    <span class="every-dat-animation">每日一句：</span><span class="every-dat-animation">世</span><span
+        class="every-dat-animation">界</span><span class="every-dat-animation">上</span><span class="every-dat-animation">最</span><span
+        class="every-dat-animation">远</span><span class="every-dat-animation">的</span><span class="every-dat-animation">距</span><span
+        class="every-dat-animation">离</span><span class="every-dat-animation">是</span><span class="every-dat-animation">，</span><span
+        class="every-dat-animation">我</span><span class="every-dat-animation">想</span><span class="every-dat-animation">和</span><span
+        class="every-dat-animation">你</span><span class="every-dat-animation">叙</span><span class="every-dat-animation">叙</span><span
+        class="every-dat-animation">旧</span><span class="every-dat-animation">，</span><span class="every-dat-animation">你</span><span
+        class="every-dat-animation">却</span><span class="every-dat-animation">问</span><span class="every-dat-animation">我</span><span
+        class="every-dat-animation">要</span><span class="every-dat-animation">不</span><span class="every-dat-animation">要</span><span
+        class="every-dat-animation">代</span><span class="every-dat-animation">购</span><span class="every-dat-animation">。</span>
+</div>
 
 </body>
 </html>
