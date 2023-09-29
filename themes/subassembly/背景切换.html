@@ -5,12 +5,38 @@
     <title>Title</title>
 </head>
 <style>
-  bod{
-    background: #1a1a1a;
-  }
+    body {
+        background: #1a1a1a;
+        background-repeat: no-repeat;
+
+        animation-name:picchange;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode:both;
+    }
+
+    @keyframes picchange {
+        0% {
+            background-image: linear-gradient(#1a1a1a,#0cb54f);
+        }
+        100% {
+            background-image: url("https://picsum.photos/id/586/800/600");
+        }
+    }
 </style>
 <body>
-
+<script>
+    // setTimeout(()=>{
+    //     var background = new Image();
+    //     background.src = 'https://obsidian.md/images/screenshot-1.0-hero-combo.png';
+    //     background.onload = function () {
+    //         console.log('Background load complete!');
+    //         var loadbackground = document.body;
+    //         loadbackground.style.backgroundImage = 'url(' + background.src + ')';
+    //         loadbackground.style.animationName = 'gradientChange';
+    //     }
+    // },1000)
+</script>
 
 </body>
 </html>

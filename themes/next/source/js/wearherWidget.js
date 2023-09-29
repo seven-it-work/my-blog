@@ -10,7 +10,7 @@ function requestGetIp(url, callback, id, gen) {
   request.send()
 }
 
-function requestPostWeather(url, callback, params, id,ip) {
+function requestPostWeather(url, callback, params, id, ip) {
   var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
   request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
@@ -25,9 +25,9 @@ function requestPostWeather(url, callback, params, id,ip) {
 
 function getDataFromApi(id, i, gen) {
   const weatherInfo = CacheUtils.getWithExpires(i);
-  if (weatherInfo){
-    updateOnPage(weatherInfo,id)
-  }else {
+  if (weatherInfo) {
+    updateOnPage(weatherInfo, id)
+  } else {
     var v = document.getElementById(id).getAttribute("v");
     var a = document.getElementById(id).getAttribute("a");
     var l = document.getElementById(id).getAttribute("loc");
@@ -43,7 +43,7 @@ function getDataFromApi(id, i, gen) {
     ub = ub.replace('天气加载中...', '天气插件')
     u = u.replace('天气加载中...', '天气插件')
     var params = 'v=' + v + '&a=' + a + '&l=' + l + '&u=' + u + '&ub=' + ub + '&i=' + i + '&g=' + g + '&id=' + id;
-    requestPostWeather('https://app2.weatherwidget.org/data/', updateOnPage, params, id,i)
+    requestPostWeather('https://app2.weatherwidget.org/data/', updateOnPage, params, id, i)
   }
 }
 
@@ -75,7 +75,7 @@ function updateOnPage(data, id) {
       // 修改背景
       const wPng = elementById.innerHTML.match(/https.*?\.jpg/g)
       if (wPng) {
-        addFadeInBackground(wPng,document.getElementsByClassName('header')[0])
+        addFadeInBackground(wPng, document.getElementsByClassName('header')[0])
       }
     }
     if (data.a.hasOwnProperty("style")) {
@@ -122,6 +122,26 @@ function addFadeInBackground(url, element) {
   background.onload = function () {
     const loadbackground = element;
     loadbackground.style.backgroundImage = 'url(' + background.src + ')';
-    loadbackground.style.animationName = 'fadein';
   }
+  element.animate([
+    {
+      backgroundPosition: "0 0",
+      width: "0%",
+      height: "0%",
+      offset: 0
+    },
+    {
+      backgroundPosition: "100% 100%",
+      width: "100%",
+      height: "100%",
+      offset: 1
+    },
+  ],{
+    duration: 3000,
+    easing: 'linear',
+    delay: 0,
+    iterations: 1,
+    direction: 'normal',
+    fill: 'forwards'
+  });
 }
