@@ -32,6 +32,9 @@
     </div>
     <script async src="{{- url_for('/js/wearherWidget.js?id=ww_4b54bde5f3d24') }}"></script>
     <!--   天气组件   -->
+
+    {{ partial('everyDay.swig', {}, {cache: theme.cache.enable}) }}
+
     <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     <!--   波浪组件   -->
     <link type="text/css" rel="stylesheet" href="{{- url_for('/css/waves.css')}}"/>
@@ -54,10 +57,6 @@
   {{ partial('_partials/widgets.swig', {}, {cache: theme.cache.enable}) }}
 
   <main class="main">
-<!--  gitHub贡献 日历组件  -->
-  <div id="github_container"></div>
-  <script src="{{- url_for('/js/github-calendar/githubcalendar.js') }}"></script>
-<!--  gitHub贡献 日历组件 -->
     <div class="main-inner">
       <div class="content-wrap">
         {% include '_partials/header/sub-menu.swig' %}
@@ -73,6 +72,11 @@
   </main>
 
   <footer class="footer">
+  <!--  gitHub贡献 日历组件  -->
+    <div id="github_container"></div>
+    <script src="{{- url_for('/js/github-calendar/githubcalendar.js') }}"></script>
+  <!--  gitHub贡献 日历组件 -->
+
     <div class="footer-inner">
       {% include '_partials/languages.swig' %}
       {{ partial('_partials/footer.swig', {}, {cache: theme.cache.enable}) }}

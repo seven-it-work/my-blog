@@ -1,0 +1,25 @@
+
+
+.a-c{
+  color:#000;
+  animation: aa 1s;
+  text-shadow: 0 0 10px #000;
+
+}
+#text{
+padding: 20px;
+}
+
+@keyframes ani{
+  from{background-position:-280px -94px;}
+  to{background-position:680px -94px;}
+}
+
+@keyframes aa {
+  0% {
+    opacity: 0
+  }
+  100%{
+    opacity: 1
+  }
+}
