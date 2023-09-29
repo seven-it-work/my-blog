@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ config.language }}">
 <head>
+
+<!-- 常量 -->
+<script>
+var ROOT_URL="{{ config.root }}"
+</script>
+  {{- next_js('constant.js') }}
+  <!-- 常量 -->
   {{- next_js('my_utils.js') }}
   {{ partial('_partials/head/head.swig', {}, {cache: theme.cache.enable}) }}
   {% include '_partials/head/head-unique.swig' %}
