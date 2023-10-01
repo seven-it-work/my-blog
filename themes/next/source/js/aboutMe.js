@@ -81,42 +81,32 @@ $(document).ready(function () {
     arrangeCurrentPage();
     scrambleOthers();
   });
+
   /*
    * Functions
    */
   function arrangeCurrentPage() {
+    // const $soup = $("#soup-container");
+    // const width = $soup.width();
+    // console.log(width);
+    // const height = $soup.height();
+    // console.log(height)
+    let textTitle = ''
+    let textDescription = ''
     for (var i = 0; i < content[currentPage].title.length; i++) {
-      $(".mutable:eq(" + currentPage + ") > .soup-title > .letter")
-        .eq(i)
-        .css({
-          left:
-            $(".position-data:eq(" + currentPage + ") > .soup-title > .letter")
-              .eq(i)
-              .offset().left + "px",
-          top:
-            $(".position-data:eq(" + currentPage + ") > .soup-title > .letter")
-              .eq(i)
-              .offset().top + "px",
-          color: "#111",
-          zIndex: 9001
-        });
+      const eq = $(".mutable:eq(" + currentPage + ") > .soup-title > .letter")
+        .eq(i);
+      eq.css({
+        display: 'none'
+      })
+      textTitle += eq.text()
     }
+    $("#showSoupTextTitle")[0].innerHTML = textTitle
     for (var i = 0; i < content[currentPage].desc.length; i++) {
-      $(".mutable:eq(" + currentPage + ") > .soup-desc > .letter")
-        .eq(i)
-        .css({
-          left:
-            $(".position-data:eq(" + currentPage + ") > .soup-desc > .letter")
-              .eq(i)
-              .offset().left + "px",
-          top:
-            $(".position-data:eq(" + currentPage + ") > .soup-desc > .letter")
-              .eq(i)
-              .offset().top + "px",
-          color: "#111",
-          zIndex: 9001
-        });
+      textDescription+=$(".position-data:eq(" + currentPage + ") > .soup-desc > .letter")
+        .eq(i).text()
     }
+    $("#showSoupTextDescription")[0].innerHTML = textDescription
   }
 
   function setText() {
@@ -146,6 +136,7 @@ $(document).ready(function () {
         for (var k = 0; k < content[i][parts[j][0]].length; k++) {
           //define random position on screen
           var randLeft = Math.floor(Math.random() * $(window).width());
+          console.log("randLeft", randLeft)
           var randTop = Math.floor(Math.random() * $(window).height());
           //defining boundaries
           var offset = $(".position-data").eq(currentPage).offset();
