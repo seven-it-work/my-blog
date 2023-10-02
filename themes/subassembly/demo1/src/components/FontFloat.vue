@@ -1,14 +1,17 @@
 <script setup>
-import {onMounted, onUpdated, reactive, ref} from 'vue'
+import {onMounted, onUpdated, reactive, ref, nextTick, onBeforeUpdate} from 'vue'
 
 defineProps({})
 
 const count = ref(0)
 
 const dataList = reactive([
-  {title: '大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客', description: 'd1'},
-  {title: '', description: 'd2'},
-  {title: '', description: ''},
+  {
+    title: '搭建',
+    description: 'd1'
+  },
+  {title: '你好你好你好你好你好你好', description: 'd2'},
+  // {title: '大家好才是真的好', description: ''},
 ])
 const showNowIndex = ref(0)
 
@@ -26,47 +29,47 @@ const changeNow = () => {
   const dataListElement = dataList[showNowIndex.value];
   for (let i = 0; i < dataListElement.titleList.length; i++) {
     const titleObj = dataListElement.titleList[i];
-    const randomInfoTitle = document.getElementById(`randomInfoTitle${showNowIndex.value}${i}`);
-    neat2Random({
-      startTop: titleObj.startTop,
-      startLeft: titleObj.startLeft,
-      endTop: titleObj.endTop,
-      endLeft: titleObj.endLeft
-    }, randomInfoTitle)
+    const element = titleObj.element;
+    const parent = element.parentElement;
+    console.log(parent)
+    random2Neat({
+      startTop: titleObj.top,
+      startLeft: titleObj.left,
+      endTop: titleObj.randomTop,
+      endLeft: titleObj.randomLeft
+    }, element)
   }
 
   for (let i = 0; i < dataListElement.descriptionList.length; i++) {
     const descriptionObj = dataListElement.descriptionList[i];
-    const randomInfoDescription = document.getElementById(`randomInfoDescription${showNowIndex.value}${i}`);
-    neat2Random({
-      startTop: descriptionObj.startTop,
-      startLeft: descriptionObj.startLeft,
-      endTop: descriptionObj.endTop,
-      endLeft: descriptionObj.endLeft
-    }, randomInfoDescription)
+    const element = descriptionObj.element;
+    random2Neat({
+      startTop: descriptionObj.top,
+      startLeft: descriptionObj.left,
+      endTop: descriptionObj.randomTop,
+      endLeft: descriptionObj.randomLeft
+    }, element)
   }
 
   // 除了激活的 全部到随机
   dataList.filter(item => !item.isActive).forEach(item => {
     for (let i = 0; i < item.titleList.length; i++) {
       const titleObj = item.titleList[i];
-      const randomInfoTitle = document.getElementById(`randomInfoTitle${item.id}${i}`);
-      random2Neat({
-        startTop: titleObj.startTop,
-        startLeft: titleObj.startLeft,
-        endTop: titleObj.endTop,
-        endLeft: titleObj.endLeft
-      }, randomInfoTitle)
+      neat2Random({
+        startTop: titleObj.top,
+        startLeft: titleObj.left,
+        endTop: titleObj.randomTop,
+        endLeft: titleObj.randomLeft
+      }, titleObj.element)
     }
     for (let i = 0; i < item.descriptionList.length; i++) {
       const descriptionObj = item.descriptionList[i];
-      const randomInfoDescription = document.getElementById(`randomInfoDescription${item.id}${i}`);
-      random2Neat({
-        startTop: descriptionObj.startTop,
-        startLeft: descriptionObj.startLeft,
-        endTop: descriptionObj.endTop,
-        endLeft: descriptionObj.endLeft
-      }, randomInfoDescription)
+      neat2Random({
+        startTop: descriptionObj.top,
+        startLeft: descriptionObj.left,
+        endTop: descriptionObj.randomTop,
+        endLeft: descriptionObj.randomLeft
+      }, descriptionObj.element)
     }
   })
 }
@@ -79,20 +82,6 @@ const getLeft = () => {
   const offsetWidth = document.getElementById("mainFontFloat").offsetWidth;
   return Math.floor(Math.random() * offsetWidth);
 }
-const test = () => {
-  // 标题的顶点坐标，计算用
-  // const titleNotUse1 = document.getElementById("titleNotUse1");
-  // const titleNotUse2 = document.getElementById("titleNotUse2");
-  // const titleDifference=titleNotUse2.getBoundingClientRect().left-titleNotUse1.getBoundingClientRect().left
-  // console.log(titleDifference)
-  // const descriptionNotUse1 = document.getElementById("descriptionNotUse1");
-  // const descriptionNotUse2 = document.getElementById("descriptionNotUse2");
-  // const descriptionDifference = descriptionNotUse2.getBoundingClientRect().left - descriptionNotUse1.getBoundingClientRect().left
-  // console.log(descriptionDifference)
-  // const titleDescriptionDifference = titleNotUse1.getBoundingClientRect().top - descriptionNotUse1.getBoundingClientRect().top
-  // console.log(titleDescriptionDifference)
-}
-
 
 const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse = false) => {
   let rabbitDownKeyframes
@@ -100,8 +89,8 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
+          {left: startLeft + "px", top: startTop + "px"},
           {left: endLeft + "px", top: endTop + "px"},
-          {left: startTop + "px", top: startLeft + "px"},
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -109,8 +98,8 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
-          {left: startTop + "px", top: startLeft + "px"},
           {left: endLeft + "px", top: endTop + "px"},
+          {left: startLeft + "px", top: startTop + "px"},
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -128,16 +117,44 @@ const neat2Random = ({startTop, startLeft, endTop, endLeft}, element) => {
   }, element, true)
 }
 
-onUpdated(() => {
+
+function initA() {
+  const elementById = document.getElementById("fontFloatCore");
+  const elementsByTagName = elementById.getElementsByTagName("span");
+  for (let i = 0; i < elementsByTagName.length; i++) {
+    const elementsByTagNameElement = elementsByTagName[i];
+    const boundingClientRect = elementsByTagNameElement.getBoundingClientRect();
+    const strings = elementsByTagNameElement.id.split('-');
+    if (strings[0].includes('Title')) {
+      const item = dataList[strings[1]].titleList[strings[2]]
+      dataList[strings[1]].titleList[strings[2]] = {
+        ...item,
+        ...{
+          element: elementsByTagNameElement,
+          left: boundingClientRect.left,
+          top: boundingClientRect.top,
+        }
+      };
+    } else if (strings[0].includes('Description')) {
+      const item = dataList[strings[1]].descriptionList[strings[2]]
+      dataList[strings[1]].descriptionList[strings[2]] = {
+        ...item,
+        ...{
+          element: elementsByTagNameElement,
+          left: boundingClientRect.left,
+          top: boundingClientRect.top,
+        }
+      };
+    }
+  }
+  for (let i = 0; i < elementsByTagName.length; i++) {
+    elementsByTagName[i].style.position = 'absolute'
+  }
   changeNow()
-})
+}
+
 
 onMounted(() => {
-  const titleDifference = 32
-  const descriptionDifference = 30;
-  const titleDescriptionDifference = 40
-  const startTop = 200;
-  const startLeft = 100;
   for (let i = 0; i < dataList.length; i++) {
     dataList[i].id = i;
     dataList[i].titleList = []
@@ -148,10 +165,8 @@ onMounted(() => {
       dataList[i].titleList.push(
           {
             text: titleList[j],
-            startTop: startTop + (titleDifference * j),
-            startLeft: startLeft,
-            endTop: getTop(),
-            endLeft: getLeft()
+            randomTop: getTop(),
+            randomLeft: getLeft()
           }
       )
     }
@@ -159,55 +174,53 @@ onMounted(() => {
       dataList[i].descriptionList.push(
           {
             text: descriptionList[j],
-            startTop: startTop + (descriptionDifference * j),
-            startLeft: startLeft + titleDescriptionDifference,
-            endTop: getTop(),
-            endLeft: getLeft()
+            randomTop: getTop(),
+            randomLeft: getLeft()
           }
       )
     }
     dataList[i].isActive = false
   }
   dataList[showNowIndex.value].isActive = true
+
+  setTimeout(() => {
+    initA()
+  }, 1500)
 })
 </script>
 
 <template>
   <div id="mainFontFloat">
     <button @click="nextClick">下一个</button>
-
-    <div v-for="item in dataList" >
-      <div style="position:absolute;top: 200px;left: 100px;width: 100px">大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客大家好这里是我的博客</div>
-      <span v-for="(title,index) in item.titleList" :id="`randomInfoTitle${item.id}${index}`" class="floatTitle">
-        {{ title.text }}
-      </span>
-      <span v-for="(description,index) in item.descriptionList" :id="`randomInfoDescription${item.id}${index}`"
-            class="floatDescription">
+    <div id="fontFloatCore">
+      <div v-for="item in dataList">
+          <span v-for="(title,index) in item.titleList" class="fontFloatClass" :id="`fontFloatTitle-${item.id}-${index}`">
+          {{ title.text }}
+          </span>
+        <br>
+        <span v-for="(description,index) in item.descriptionList" class="fontFloatClass"
+              :id="`fontFloatDescription-${item.id}-${index}`">
         {{ description.text }}
-      </span>
+        </span>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-#mainFontFloat{
+#mainFontFloat {
   position: relative;
   overflow: hidden;
   height: 999px;
 }
 
-
-.floatTitle {
-  position: absolute;
-  color: rgb(221, 221, 221);
-  z-index: initial;
-  font-size: 32px;
-}
-
-.floatDescription {
-  position: absolute;
+.fontFloatClass {
   color: rgb(221, 221, 221);
   z-index: initial;
   font-size: 28px;
+}
+
+#fontFloatCore div{
+  position: absolute;
 }
 </style>
