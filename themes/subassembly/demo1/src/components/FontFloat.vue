@@ -7,11 +7,11 @@ const count = ref(0)
 
 const dataList = reactive([
   {
-    title: '搭建',
+    title: '测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多',
     description: 'd1'
   },
   {title: '你好你好你好你好你好你好', description: 'd2'},
-  // {title: '大家好才是真的好', description: ''},
+  {title: '大家好才是真的好', description: ''},
 ])
 const showNowIndex = ref(0)
 
@@ -30,7 +30,8 @@ const changeNow = () => {
   for (let i = 0; i < dataListElement.titleList.length; i++) {
     const titleObj = dataListElement.titleList[i];
     const element = titleObj.element;
-    const parent = element.parentElement;
+    element.style.background="#ffffff"
+    element.style.zIndex="9999"
     console.log(parent)
     random2Neat({
       startTop: titleObj.top,
@@ -55,12 +56,15 @@ const changeNow = () => {
   dataList.filter(item => !item.isActive).forEach(item => {
     for (let i = 0; i < item.titleList.length; i++) {
       const titleObj = item.titleList[i];
+      const element = titleObj.element;
+      element.style.background="rgba(255, 255, 255, 0.1)"
+      element.style.zIndex="-9999"
       neat2Random({
         startTop: titleObj.top,
         startLeft: titleObj.left,
         endTop: titleObj.randomTop,
         endLeft: titleObj.randomLeft
-      }, titleObj.element)
+      }, element)
     }
     for (let i = 0; i < item.descriptionList.length; i++) {
       const descriptionObj = item.descriptionList[i];
@@ -119,6 +123,7 @@ const neat2Random = ({startTop, startLeft, endTop, endLeft}, element) => {
 
 
 function initA() {
+  debugger
   const elementById = document.getElementById("fontFloatCore");
   const elementsByTagName = elementById.getElementsByTagName("span");
   for (let i = 0; i < elementsByTagName.length; i++) {
@@ -212,6 +217,9 @@ onMounted(() => {
   position: relative;
   overflow: hidden;
   height: 999px;
+  padding: 10px;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .fontFloatClass {
@@ -219,8 +227,12 @@ onMounted(() => {
   z-index: initial;
   font-size: 28px;
 }
-
+#fontFloatCore{
+  text-align: center;
+}
 #fontFloatCore div{
   position: absolute;
+  left: 0;
+  right: 0;
 }
 </style>
