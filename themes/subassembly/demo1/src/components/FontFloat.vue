@@ -30,7 +30,6 @@ const changeNow = () => {
   for (let i = 0; i < dataListElement.titleList.length; i++) {
     const titleObj = dataListElement.titleList[i];
     const element = titleObj.element;
-    element.style.background="#ffffff"
     element.style.zIndex="9999"
     console.log(parent)
     random2Neat({
@@ -57,7 +56,6 @@ const changeNow = () => {
     for (let i = 0; i < item.titleList.length; i++) {
       const titleObj = item.titleList[i];
       const element = titleObj.element;
-      element.style.background="rgba(255, 255, 255, 0.1)"
       element.style.zIndex="-9999"
       neat2Random({
         startTop: titleObj.top,
@@ -93,8 +91,8 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
-          {left: startLeft + "px", top: startTop + "px"},
-          {left: endLeft + "px", top: endTop + "px"},
+          {left: startLeft + "px", top: startTop + "px",color:"#000000",background:"#ffffff"},
+          {left: endLeft + "px", top: endTop + "px",color: "rgb(221, 221, 221)",background:"rgba(255, 255, 255, 0.1)"},
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -102,8 +100,8 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
-          {left: endLeft + "px", top: endTop + "px"},
-          {left: startLeft + "px", top: startTop + "px"},
+          {left: endLeft + "px", top: endTop + "px",color: "rgb(221, 221, 221)",background:"rgba(255, 255, 255, 0.1)"},
+          {left: startLeft + "px", top: startTop + "px",color:"#000000",background:"#ffffff"},
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -123,7 +121,6 @@ const neat2Random = ({startTop, startLeft, endTop, endLeft}, element) => {
 
 
 function initA() {
-  debugger
   const elementById = document.getElementById("fontFloatCore");
   const elementsByTagName = elementById.getElementsByTagName("span");
   for (let i = 0; i < elementsByTagName.length; i++) {
@@ -215,7 +212,6 @@ onMounted(() => {
 <style scoped>
 #mainFontFloat {
   position: relative;
-  overflow: hidden;
   height: 999px;
   padding: 10px;
   word-wrap: break-word;
