@@ -5,14 +5,8 @@ defineProps({})
 
 const count = ref(0)
 
-const dataList = reactive([
-  {
-    title: '测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多测试文字非常多',
-    description: 'd1'
-  },
-  {title: '你好你好你好你好你好你好', description: 'd2'},
-  {title: '大家好才是真的好', description: ''},
-])
+
+const dataList = reactive(FONT_FLOAT_DATA_INFO)
 const showNowIndex = ref(0)
 
 const nextClick = () => {
@@ -31,7 +25,6 @@ const changeNow = () => {
     const titleObj = dataListElement.titleList[i];
     const element = titleObj.element;
     element.style.zIndex="9999"
-    console.log(parent)
     random2Neat({
       startTop: titleObj.top,
       startLeft: titleObj.left,
