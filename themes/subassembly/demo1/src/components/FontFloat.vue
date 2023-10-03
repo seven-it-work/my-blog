@@ -10,21 +10,78 @@ const dataList = reactive(FONT_FLOAT_DATA_INFO)
 const showNowIndex = ref(0)
 
 const nextClick = () => {
+  const pre = showNowIndex.value
   showNowIndex.value++
   showNowIndex.value = showNowIndex.value === dataList.length ? 0 : showNowIndex.value
   for (let i = 0; i < dataList.length; i++) {
     dataList[i].isActive = false
   }
   dataList[showNowIndex.value].isActive = true
-  changeNow()
+  changeA(dataList[pre], dataList[showNowIndex.value])
 }
-const changeNow = () => {
+const preClick = () => {
+  const pre = showNowIndex.value
+  showNowIndex.value--
+  showNowIndex.value = showNowIndex.value === -1 ? dataList.length - 1 : showNowIndex.value
+  for (let i = 0; i < dataList.length; i++) {
+    dataList[i].isActive = false
+  }
+  dataList[showNowIndex.value].isActive = true
+  changeA(dataList[pre], dataList[showNowIndex.value])
+}
+const changeA = (pre, next) => {
+  // 激活的动画
+  for (let i = 0; i < next.titleList.length; i++) {
+    const titleObj = next.titleList[i];
+    const element = titleObj.element;
+    element.style.zIndex = "9999"
+    random2Neat({
+      startTop: titleObj.top,
+      startLeft: titleObj.left,
+      endTop: titleObj.randomTop,
+      endLeft: titleObj.randomLeft
+    }, element)
+  }
+  for (let i = 0; i < next.descriptionList.length; i++) {
+    const descriptionObj = next.descriptionList[i];
+    const element = descriptionObj.element;
+    random2Neat({
+      startTop: descriptionObj.top,
+      startLeft: descriptionObj.left,
+      endTop: descriptionObj.randomTop,
+      endLeft: descriptionObj.randomLeft
+    }, element)
+  }
+  // 关闭动画
+  for (let i = 0; i < pre.titleList.length; i++) {
+    const titleObj = pre.titleList[i];
+    const element = titleObj.element;
+    element.style.zIndex = "-9999"
+    neat2Random({
+      startTop: titleObj.top,
+      startLeft: titleObj.left,
+      endTop: titleObj.randomTop,
+      endLeft: titleObj.randomLeft
+    }, element)
+  }
+  for (let i = 0; i < pre.descriptionList.length; i++) {
+    const descriptionObj = pre.descriptionList[i];
+    neat2Random({
+      startTop: descriptionObj.top,
+      startLeft: descriptionObj.left,
+      endTop: descriptionObj.randomTop,
+      endLeft: descriptionObj.randomLeft
+    }, descriptionObj.element)
+  }
+}
+
+const initChange = () => {
   // 激活的动画
   const dataListElement = dataList[showNowIndex.value];
   for (let i = 0; i < dataListElement.titleList.length; i++) {
     const titleObj = dataListElement.titleList[i];
     const element = titleObj.element;
-    element.style.zIndex="9999"
+    element.style.zIndex = "9999"
     random2Neat({
       startTop: titleObj.top,
       startLeft: titleObj.left,
@@ -49,7 +106,7 @@ const changeNow = () => {
     for (let i = 0; i < item.titleList.length; i++) {
       const titleObj = item.titleList[i];
       const element = titleObj.element;
-      element.style.zIndex="-9999"
+      element.style.zIndex = "-9999"
       neat2Random({
         startTop: titleObj.top,
         startLeft: titleObj.left,
@@ -84,8 +141,13 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
-          {left: startLeft + "px", top: startTop + "px",color:"#000000",background:"#ffffff"},
-          {left: endLeft + "px", top: endTop + "px",color: "rgb(221, 221, 221)",background:"rgba(255, 255, 255, 0.1)"},
+          {left: startLeft + "px", top: startTop + "px", color: "#000000", background: "#ffffff"},
+          {
+            left: endLeft + "px",
+            top: endTop + "px",
+            color: "rgb(221, 221, 221)",
+            background: "rgba(255, 255, 255, 0.1)"
+          },
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -93,8 +155,13 @@ const random2Neat = ({startTop, startLeft, endTop, endLeft}, element, isReverse 
     rabbitDownKeyframes = new KeyframeEffect(
         element,
         [
-          {left: endLeft + "px", top: endTop + "px",color: "rgb(221, 221, 221)",background:"rgba(255, 255, 255, 0.1)"},
-          {left: startLeft + "px", top: startTop + "px",color:"#000000",background:"#ffffff"},
+          {
+            left: endLeft + "px",
+            top: endTop + "px",
+            color: "rgb(221, 221, 221)",
+            background: "rgba(255, 255, 255, 0.1)"
+          },
+          {left: startLeft + "px", top: startTop + "px", color: "#000000", background: "#ffffff"},
         ],
         {duration: 3000, fill: 'forwards'}
     );
@@ -118,7 +185,11 @@ function initA() {
   const elementsByTagName = elementById.getElementsByTagName("span");
   for (let i = 0; i < elementsByTagName.length; i++) {
     const elementsByTagNameElement = elementsByTagName[i];
-    const boundingClientRect = elementsByTagNameElement.getBoundingClientRect();
+    // const boundingClientRect = elementsByTagNameElement.getBoundingClientRect();
+    const boundingClientRect = {
+      top: elementsByTagNameElement.offsetTop,
+      left: elementsByTagNameElement.offsetLeft
+    }
     const strings = elementsByTagNameElement.id.split('-');
     if (strings[0].includes('Title')) {
       const item = dataList[strings[1]].titleList[strings[2]]
@@ -145,7 +216,7 @@ function initA() {
   for (let i = 0; i < elementsByTagName.length; i++) {
     elementsByTagName[i].style.position = 'absolute'
   }
-  changeNow()
+  initChange()
 }
 
 
@@ -186,10 +257,14 @@ onMounted(() => {
 
 <template>
   <div id="mainFontFloat">
-    <button @click="nextClick">下一个</button>
+    <a>
+      <i class="iconfont icon-shangyige" style="font-size: 32px;" @click="preClick"></i>
+      <i class="iconfont icon-xiayige" style="font-size: 32px;" @click="nextClick"></i>
+    </a>
     <div id="fontFloatCore">
       <div v-for="item in dataList">
-          <span v-for="(title,index) in item.titleList" class="fontFloatClass" :id="`fontFloatTitle-${item.id}-${index}`">
+          <span v-for="(title,index) in item.titleList" class="fontFloatClass"
+                :id="`fontFloatTitle-${item.id}-${index}`">
           {{ title.text }}
           </span>
         <br>
@@ -209,6 +284,7 @@ onMounted(() => {
   padding: 10px;
   word-wrap: break-word;
   text-align: center;
+  overflow: hidden;
 }
 
 .fontFloatClass {
@@ -216,13 +292,15 @@ onMounted(() => {
   z-index: initial;
   font-size: 28px;
 }
-#fontFloatCore{
+
+#fontFloatCore {
   text-align: center;
 }
-#fontFloatCore div{
+
+#fontFloatCore div {
   position: absolute;
   left: 0;
   right: 0;
-  top:0;
+  top: 50px;
 }
 </style>

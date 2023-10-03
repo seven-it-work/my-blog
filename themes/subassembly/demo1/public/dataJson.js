@@ -6,4 +6,5 @@ var FONT_FLOAT_DATA_INFO = [
     },
     {title: '你好你好你好你好你好你好', description: 'd2'},
     {title: '大家好才是真的好', description: ''},
+    {title: '1', description: ''},
 ]

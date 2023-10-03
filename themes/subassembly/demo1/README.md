@@ -10,4 +10,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [ ] 待抽取一些配置：如颜色、背景色等
 - [ ] 支持html标签
-- [ ] 按钮样式、上一步样式、按钮居中
+- [x] 按钮样式、上一步样式、按钮居中
