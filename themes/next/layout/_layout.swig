@@ -6,6 +6,10 @@
 <script>
 var ROOT_URL="{{ config.root }}"
 </script>
+  {%- for cssUrl in config.cssLinkList %}
+  <link rel="stylesheet" href="{{ cssUrl }}"/>
+  {%- endfor %}
+
   {{- next_js('constant.js') }}
   <!-- 常量 -->
   {{- next_js('my_utils.js') }}

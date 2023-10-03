@@ -3,7 +3,6 @@ import FontFloat from './components/FontFloat.vue'
 </script>
 
 <template>
-  <div style="height: 200px"></div>
   <FontFloat />
 </template>
 

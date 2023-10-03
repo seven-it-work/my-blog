@@ -8,6 +8,7 @@ const count = ref(0)
 
 const dataList = reactive(FONT_FLOAT_DATA_INFO)
 const showNowIndex = ref(0)
+const showTimer=ref(setTimeout(()=>{}))
 
 const nextClick = () => {
   const pre = showNowIndex.value
@@ -219,7 +220,6 @@ function initA() {
   initChange()
 }
 
-
 onMounted(() => {
   for (let i = 0; i < dataList.length; i++) {
     dataList[i].id = i;
@@ -248,8 +248,10 @@ onMounted(() => {
     dataList[i].isActive = false
   }
   dataList[showNowIndex.value].isActive = true
-
-  setTimeout(() => {
+  if (showTimer.value){
+    clearTimeout(showTimer.value)
+  }
+  showTimer.value=setTimeout(() => {
     initA()
   }, 1500)
 })

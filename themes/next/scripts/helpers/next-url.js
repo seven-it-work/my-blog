@@ -56,6 +56,9 @@ hexo.extend.helper.register('next_url', function(path, text, options = {}) {
       attrs.rel = null;
     }
   }
+  if(options.refresh){
+    attrs['onclick']=`javascript:window.location.href='${this.url_for(path)}'`
+  }
 
   return htmlTag(tag, attrs, decodeURI(text), false);
 });

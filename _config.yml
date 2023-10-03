@@ -129,3 +129,6 @@ live2d:
     scale: 0.5 # 移动设备上的缩放
   react:
     opacity: 0.7
+
+cssLinkList:
+  - //at.alicdn.com/t/c/font_4235380_zddw3ty76s.css

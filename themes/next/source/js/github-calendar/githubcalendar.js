@@ -286,6 +286,7 @@ var loading_git = (color) => {
 };
 // 日历组件配置
 (function () {
+
   const git_user = 'seven-it-work';
   const github_container = document.getElementById('github_container');
   const github_loading = document.getElementById('github_loading');
