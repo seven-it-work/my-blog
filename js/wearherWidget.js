@@ -10,7 +10,7 @@ function requestGetIp(url, callback, id, gen) {
   request.send()
 }
 
-function requestPostWeather(url, callback, params, id,ip) {
+function requestPostWeather(url, callback, params, id, ip) {
   var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
   request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
@@ -25,9 +25,9 @@ function requestPostWeather(url, callback, params, id,ip) {
 
 function getDataFromApi(id, i, gen) {
   const weatherInfo = CacheUtils.getWithExpires(i);
-  if (weatherInfo){
-    updateOnPage(weatherInfo,id)
-  }else {
+  if (weatherInfo) {
+    updateOnPage(weatherInfo, id)
+  } else {
     var v = document.getElementById(id).getAttribute("v");
     var a = document.getElementById(id).getAttribute("a");
     var l = document.getElementById(id).getAttribute("loc");
@@ -43,7 +43,7 @@ function getDataFromApi(id, i, gen) {
     ub = ub.replace('天气加载中...', '天气插件')
     u = u.replace('天气加载中...', '天气插件')
     var params = 'v=' + v + '&a=' + a + '&l=' + l + '&u=' + u + '&ub=' + ub + '&i=' + i + '&g=' + g + '&id=' + id;
-    requestPostWeather('https://app2.weatherwidget.org/data/', updateOnPage, params, id,i)
+    requestPostWeather('https://app2.weatherwidget.org/data/', updateOnPage, params, id, i)
   }
 }
 
@@ -75,7 +75,7 @@ function updateOnPage(data, id) {
       // 修改背景
       const wPng = elementById.innerHTML.match(/https.*?\.jpg/g)
       if (wPng) {
-        document.getElementsByClassName('header')[0].style.background = `url(${wPng})`
+        addFadeInBackground(wPng, document.getElementsByClassName('header')[0])
       }
     }
     if (data.a.hasOwnProperty("style")) {
@@ -110,3 +110,41 @@ function updateWidget(id, gen) {
 }
 
 updateWidget('ww_4b54bde5f3d24', 0);
+
+/**
+ * 图片背景过渡
+ * @param url
+ * @param domId
+ */
+function addFadeInBackground(url, element) {
+  const background = new Image();
+  background.src = url;
+  background.onload = function () {
+    const loadbackground = element;
+    loadbackground.style.backgroundImage = 'url(' + background.src + ')';
+  }
+  element.animate([
+    {
+      offset: 0,
+      opacity: 0
+    },
+    {
+      offset: 1,
+      opacity: 1
+    }
+  ], {
+    duration: 3000,
+    easing: 'linear',
+    delay: 0,
+    iterations: 1,
+    direction: 'normal',
+    fill: 'none'
+  })
+  let isSet = false
+   element.addEventListener("animationend", function (e) {
+    if (!isSet) {
+      getEveryDayStr()
+      isSet = true
+    }
+  }, false);
+}

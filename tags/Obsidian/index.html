@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+
+<!-- 常量 -->
+<script>
+var ROOT_URL="/my-blog/"
+</script>
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4235380_zddw3ty76s.css"/>
+<script src="/my-blog/js/constant.js"></script>
+
+  <!-- 常量 -->
 <script src="/my-blog/js/my_utils.js"></script>
 
   <meta charset="UTF-8">
@@ -22,7 +31,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"seven.gitee.io","root":"/my-blog/","scheme":"Muse","version":"7.8.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"seven.gitee.io","root":"/my-blog/","scheme":"Muse","version":"7.8.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
@@ -89,16 +98,27 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="container use-motion">
-  <div class="headband"></div>
-
+<!-- 还不知道有什么用，一长串黑色的 -->
+<!--  <div class="headband"></div>-->
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <!-- 左上角图片 一般节假日什么的 -->
+    <img style="width: auto;position: absolute;top: 0;left: 0;z-index: 9999;" src="/my-blog/images/739924dd0dc8e2a37f14d6403cf72acd_134x24.png"/>
+    <!-- 左上角图片 一般节假日什么的 -->
     <!--   天气组件   -->
+    <link type="text/css" rel="stylesheet" href="/my-blog/css/wearherWidget.css"/>
     <div id="ww_4b54bde5f3d24" v='1.3' loc='auto'
          a='{"t":"responsive","lang":"zh","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
       <a href="https://weatherwidget.org/zh/" id="ww_4b54bde5f3d24_u" target="_blank">天气加载中...</a>
     </div>
     <script async src="/my-blog/js/wearherWidget.js?id=ww_4b54bde5f3d24"></script>
     <!--   天气组件   -->
+
+    <link type="text/css" rel="stylesheet" href="/my-blog/css/everyDay.css"/>
+<div id="every-dat-text">
+</div>
+<script src="/my-blog/js/everyDay.js"></script>
+
+
     <div class="header-inner">  <div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
@@ -110,11 +130,218 @@
 
   <div class="site-meta">
 
-    <a href="/my-blog/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">技术博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+<!--    <a href="/my-blog/" class="brand" rel="start">-->
+<!--      <span class="logo-line-before"><i></i></span>-->
+<!--      <h1 class="site-title">技术博客</h1>-->
+<!--      <span class="logo-line-after"><i></i></span>-->
+<!--    </a>-->
+<!--  自定义logo样式1  -->
+    <style>
+.orbit-circle {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  transform-origin: center;
+  animation: orbit 10s infinite linear;
+  animation-delay: 0.25s;
+  border: 5px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #4bbce7;
+}
+
+.orbit-object {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #54f7f8, 0px 0px 20px #54f7f8, 0px 0px 30px #54f7f8, 0px 0px 50px #54f7f8, 0px 0px 60px #54f7f8;
+  z-index: 1;
+}
+
+.orbit-object span.ripple {
+  position: relative;
+  top: -11px;
+  left: 0px;
+  width: 5px;
+  height: 5px;
+  padding: 5px;
+  font-size: 0px;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: ripple 1s infinite linear;
+}
+
+.text {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  color: white;
+  font-size: 80px;
+  text-shadow: 0 0 15px #4bbce7;
+}
+
+.trace {
+  position: relative;
+  height: 5px;
+  width: 150px;
+  top: 50px;
+  left: -25px;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  background-color: white;
+  z-index: 2;
+}
+
+/*responsive*/
+@media screen and (max-width: 992px) {
+  .text {
+    font-size: 58px;
+    line-height: 1;
+  }
+
+  .orbit-circle {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border: 3px solid white;
+  }
+
+  .orbit-object {
+    width: 5px;
+    height: 5px;
+    box-shadow: 0px 0px 5px #54f7f8, 0px 0px 10px #54f7f8, 0px 0px 15px #54f7f8, 0px 0px 25px #54f7f8, 0px 0px 30px #54f7f8;
+    top: 7px;
+  }
+
+  .orbit-object span.ripple {
+    padding: 1px;
+    top: -12px;
+    left: 2px;
+    animation: rippleSmall 1s infinite linear;
+  }
+
+  .trace {
+    width: 75px;
+    height: 3px;
+    top: 27px;
+    left: -12px;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rippleSmall {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1), 0 0 0 16px rgba(84, 247, 248, 0);
+  }
+}
+
+@-moz-keyframes rippleSmall {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1), 0 0 0 16px rgba(84, 247, 248, 0);
+  }
+}
+
+@keyframes rippleSmall {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(84, 247, 248, 0.1), 0 0 0 8px rgba(84, 247, 248, 0.1), 0 0 0 12px rgba(84, 247, 248, 0.1), 0 0 0 16px rgba(84, 247, 248, 0);
+  }
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1), 0 0 0 20px rgba(84, 247, 248, 0);
+  }
+}
+
+@-moz-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1), 0 0 0 20px rgba(84, 247, 248, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(84, 247, 248, 0.1), 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(84, 247, 248, 0.1), 0 0 0 10px rgba(84, 247, 248, 0.1), 0 0 0 15px rgba(84, 247, 248, 0.1), 0 0 0 20px rgba(84, 247, 248, 0);
+  }
+}
+
+.levitate {
+  animation: levitate 1s ease-in-out -0.75s infinite alternate;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+#logo{
+  padding: 10px;
+}
+</style>
+<div id="logo">
+<div class="orbit-circle">
+  <div class="orbit-object"><span class="ripple"></span></div>
+</div>
+<a href="/my-blog/" style="border-bottom: none">
+  <div class="text">技术博客<b class=""></b></div>
+</a>
+</div>
+
+
+<!--  自定义logo样式  -->
   </div>
 
   <div class="site-nav-right">
@@ -129,29 +356,25 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/my-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/my-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+        <li class="menu-item menu-item-home" id="home">
+      <a href="/my-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/my-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/my-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+        <li class="menu-item menu-item-archives" id="archives">
+      <a href="/my-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-about" id="about">
+    <!--  由于关于页面存在 js需要重新渲染，所以加入重新刷新脚本-->
+      <a href="/my-blog/about/" rel="section" refresh onclick="javascript:window.location.href&#x3D;&#39;&#x2F;my-blog&#x2F;about&#x2F;&#39;"><i class="fa fa-user fa-fw"></i>关于</a>
 
-    <a href="/my-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+  </li>
+        <li class="menu-item menu-item-tags" id="tags">
+      <a href="/my-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories" id="categories">
+      <a href="/my-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -208,7 +431,6 @@
   </header>
   
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
   <main class="main">
@@ -403,6 +625,11 @@
   </main>
 
   <footer class="footer">
+  <!--  gitHub贡献 日历组件  -->
+    <div id="github_container"></div>
+    <script src="/my-blog/js/github-calendar/githubcalendar.js"></script>
+  <!--  gitHub贡献 日历组件 -->
+
     <div class="footer-inner">
       
 
@@ -489,8 +716,6 @@
 
 
 <script src="/my-blog/js/next-boot.js"></script>
-
-<script src="/my-blog/js/bookmark.js"></script>
 
   <script>
 var pjax = new Pjax({
