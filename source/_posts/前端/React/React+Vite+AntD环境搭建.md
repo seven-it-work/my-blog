@@ -68,3 +68,85 @@ https://ant.design/components/date-picker-cn#components-date-picker-demo-basic
 ![image.png](https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20231005114910.png)
 
 # 路由安装
+## 一、安裝react-router-dom
+	react-router-dom官网：https://reactrouter.com/en/main
+	中文文档：https://react-guide.github.io/react-router-cn/docs/Introduction.html
+	
+```sh
+npm i react-router-dom
+```
+## 二、修改main.tsx全局设定路由
+```tsx
+import React from 'react'  
+import ReactDOM from 'react-dom/client'  
+import App from './App.tsx'  
+import './index.css'  
+import zhCN from 'antd/locale/zh_CN';  
+import { ConfigProvider } from 'antd';  
+import {BrowserRouter} from "react-router-dom";  
+  
+ReactDOM.createRoot(document.getElementById('root')!).render(  
+  <React.StrictMode>  
+      <ConfigProvider locale={zhCN}>  
+          <BrowserRouter>  
+              <App />  
+          </BrowserRouter>  
+      </ConfigProvider>  
+  </React.StrictMode>,  
+)
+```
+![image.png](https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20231005154840.png)
+## 三、定义路由
+创建文件router/index.tsx
+```tsx
+import {Route, Routes} from "react-router-dom";  
+// 定义的页面1
+import Home from "../views/Home";  
+// 定义的页面2
+import App1 from "../apps/App1";  
+  
+// 定义路由  
+const routeList = [  
+    {path: '/', title: '/', element: Home},  
+    {path: '/view1', title: 'page2', element: App1},  
+]  
+  
+export default function Router() {  
+    return (  
+        <div>  
+            <Routes>  
+                {  
+                    routeList.map((item, index) => (  
+                        <Route key={index} path={item.path} element={<item.element/>}/>  
+                    ))  
+                }  
+            </Routes>  
+        </div>  
+    )  
+}
+```
+![image.png](https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20231005155026.png)
+## 四、引用路由
+在App.tsx中引用刚刚定义的路由，并简单添加路由跳转的导航
+```tsx
+import React, {useState} from 'react'  
+import './App.css'  
+import {Link} from "react-router-dom";  
+import Router from "./router/index";  
+  
+  
+function App() {  
+    return (  
+        <>  
+            <Link to="/"><h4>Home</h4></Link>  
+            <Link to="/view1"><h4>View1</h4></Link>  
+            <Router/>  
+        </>  
+    )  
+}  
+  
+export default App
+```
+![image.png](https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20231005155147.png)
+## 五、效果展示
+![image.png](https://yjl-img.oss-cn-beijing.aliyuncs.com/_post/20231005155330.png)
