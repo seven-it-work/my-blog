@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "obsidianTemplate/hexo-Next Group Pictures.md",
                 "mode": "source",
                 "source": true
               }
@@ -32,7 +32,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "obsidianTemplate/hexo-Next Group Pictures.md",
                 "mode": "preview",
                 "source": true
               }
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 202.5
   },
   "right": {
     "id": "0b765798117f76a0",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "obsidianTemplate/hexo-Next Group Pictures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md",
+                "file": "obsidianTemplate/hexo-Next Group Pictures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/win/obsidian/obsidian模板使用.md"
+                "file": "obsidianTemplate/hexo-Next Group Pictures.md"
               }
             }
           }
@@ -169,14 +169,22 @@
   },
   "active": "372a9384f4963597",
   "lastOpenFiles": [
-    "obsidianTemplate/hexo模板.md",
-    "_posts/win/obsidian/obsidian模板使用.md",
-    "随机命名.md",
+    "_posts/win/obsidian/obsidian插件（一）模板使用.md",
+    "obsidianTemplate/hexo-Next Group Pictures.md",
     "obsidianTemplate/hexo-Aurora 折叠板.md",
-    "obsidianTemplate/hexo-Aurora 危险.md",
-    "obsidianTemplate/hexo-Aurora 提醒.md",
-    "obsidianTemplate/hexo-Aurora 警告.md",
+    "_posts/win/obsidian/obsidian安装.md",
+    "_posts/win/utools.md",
     "_posts/win/Snipaste.md",
+    "obsidianTemplate/hexo-Next Tips Note.md",
+    "obsidianTemplate/hexo-Aurora 提醒.md",
+    "_posts/win/obsidian/obsidian模板使用.md",
+    "obsidianTemplate/hexo-Aurora 危险.md",
+    "categories/index.md",
+    "categories",
+    "_data/header.swig",
+    "_data",
+    "obsidianTemplate/hexo模板.md",
+    "随机命名.md",
     "_posts/win/obsidian/obsidian.md",
     "_posts/hello-world.md",
     "obsidianTemplate/index 1.md",

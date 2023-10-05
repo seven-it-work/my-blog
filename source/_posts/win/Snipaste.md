@@ -1,16 +1,16 @@
 ---
 title: Snipaste
-description: Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！下载并打开 Snipaste，按下 `F1` 来开始截图，再按 `F3`，截图就在桌面置顶显示了。就这么简单！
-feature: false
-date: 2023-09-23 11:02:21
+description: "Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！下载并打开 Snipaste，按下\_`F1`\_来开始截图，再按\_`F3`，截图就在桌面置顶显示了。就这么简单！"
 tags:
   - 效率工具
   - 新机必装
   - 截图工具
 categories:
   - win软件
-cover: https://i.v2ex.co/N3QEb3VA.png
-author: author-seven
+photos:
+  - 'https://i.v2ex.co/N3QEb3VA.png'
+abbrlink: 108dcde3
+date: 2023-09-23 11:02:21
 ---
 
 # 下载地址

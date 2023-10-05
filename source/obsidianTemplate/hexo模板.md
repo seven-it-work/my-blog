@@ -1,12 +1,11 @@
 ---
 title: {{title}}
-description: 描述
-excerpt: 摘要
+description:
 date: {{date}}
-tags: 
-categories: 
+updated: {{date}}
+tags:
+categories:
 photos: 
-comments: true
 ---
 
 待完善...

@@ -5,20 +5,24 @@
 # Site
 title: 技术博客
 subtitle: ''
-description: '技术博客'
-keywords: Java,JavaScript,React,Vue,Python
-author: 七佳
-language: en
+description: ''
+keywords: Java,JavaScipt,TypeScript,Python
+author: Seven
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://seven.gitee.io/
-permalink: :year/:month/:day/:title/
+root: /my-blog/
+permalink: :abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+abbrlink:
+  alg: crc32
+  rep: hex
 
 # Directory
 source_dir: source
@@ -46,7 +50,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -91,7 +95,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-exclude:
+exclude: obsidianTemplate/
 ignore:
 
 # Extensions
@@ -103,6 +107,28 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@gitee.com:GTeam_seven/GTeam_seven.git
+  repo: git@github.com:seven-it-work/my-blog.git
   branch: hexo-page
 
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: true
+  log: false
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: true
+    scale: 0.5 # 移动设备上的缩放
+  react:
+    opacity: 0.7
+
+cssLinkList:
+  - //at.alicdn.com/t/c/font_4235380_zddw3ty76s.css
