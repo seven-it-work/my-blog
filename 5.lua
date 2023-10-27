@@ -6,12 +6,12 @@ user4={445 ,167 ,0 }
 
 
 
-
+save_list_map={}
 
 
 function Main0()
   SN = gg.choice({
-    "一级菜单",
+    "修改",
     "一键修改",
   }, nil, "")
   if SN==1 then
@@ -33,17 +33,17 @@ function Main0()
   FX1=0
 end
 
-function Main1()
+function Main2()
   SN = gg.choice({
     "血",
   }, nil, "这是一个公告")
   if SN==1 then
-    HS2()
+   
   end
   FX1=0
 end
 
-function HS2()
+function Main1()
   input_info= gg.prompt(
   {'当前生命值', '魔法攻击力', '最大生命值'},
   {[1]=0,[2]=0,[3]=0},
@@ -55,10 +55,12 @@ end
 
 
 function do_table(input_info)
-if input_info[3]==0 then
+if input_info[3]..''=='0' then
     input_info[3]=input_info[1]
+    print(input_info)
   end
-  search_str=input_info[1]..';'..input_info[2]..';'..input_info[3]..'::'
+  search_str=input_info[2]..';'..input_info[3]..';'..input_info[1]..'::'
+  print(search_str)
   gg.clearResults()
   gg.setRanges(4)
   gg.searchNumber(search_str, gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
@@ -72,8 +74,7 @@ if input_info[3]==0 then
   re=gg.getResults(10)
   for i = 1, #re do
     -- arr[i]
-    print(re[i])
-    gg.setValues({[1] = {address = re[i].address-160,flags = gg.TYPE_DOUBLE,freeze = false,value = 999},
+    list={[1] = {address = re[i].address-160,flags = gg.TYPE_DOUBLE,freeze = false,value = 999},
       [2]={address = re[i].address-240,flags = gg.TYPE_DOUBLE,freeze = false,value = 1999},
       [3]={address = re[i].address-240-120,flags = gg.TYPE_DOUBLE,freeze = false,value = 2999},
       [4]={address = re[i].address-240-120-40,flags = gg.TYPE_DOUBLE,freeze = false,value = 19},
@@ -81,7 +82,11 @@ if input_info[3]==0 then
       [6]={address = re[i].address-240-120-40-40-80,flags = gg.TYPE_DOUBLE,freeze = false,value = 18},
       [7]={address = re[i].address-240-120-40-40-80-40,flags = gg.TYPE_DOUBLE,freeze = false,value = 2999},
       [8]={address = re[i].address,flags = gg.TYPE_DOUBLE,freeze = false,value = 799}
-    })
+    }
+    
+    
+    gg.setValues(list)
+    gg.addListItems(list)
   end
 
   gg.toast("")
@@ -97,4 +102,4 @@ while true do
   if FX1 == nil then
     Main0()
   end
-end
+end_
