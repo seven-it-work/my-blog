@@ -37,15 +37,35 @@ function Main0()
       do_table(userList[i])
     end
    elseif SN==3 then
-runHistoryEdit()
+    runHistoryEdit()
+   elseif SN==4 then
+    runHistoryEdit()
   end
   FX1=0
 end
 historyInfo={}
+function removeHistoryEdit()
+  multiChoiceOptions={"全选"}
+  for k,v in ipairs(historyInfo) do
+    multiChoiceOptions.insert(k)
+  end
+  menu = gg.multiChoice(multiChoiceOptions,nil,"这里可以随便写")
+  if menu[1]==true then
+    historyInfo={}
+    gg.toast("删除完成")
+    return
+  end
+  newHistoryInfo
+  for k,v in ipairs(menu) do
+    if v ==false then
+      newHistoryInfo[k]=historyInfo[k]
+    end
+  end
+  historyInfo=newHistoryInfo
+end
 function runHistoryEdit()
   multiChoiceOptions={"全选"}
   for k,v in ipairs(historyInfo) do
-  print(k)
     multiChoiceOptions.insert(k)
   end
   menu = gg.multiChoice(multiChoiceOptions,nil,"这里可以随便写")
@@ -64,7 +84,6 @@ function runHistoryEdit()
       do_table(historyInfo[k])
     end
   end
-
 end
 
 function Main2()
@@ -120,14 +139,43 @@ function do_table(input_info)
     return -1
   end
   gg.searchNumber(input_info[offsetThePointerIndex], gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
-  search2=gg.getResults(10)
+  search2=gg.getResults(100)
   if #search2>5 then
-    gg.alert("查询结果太多："..searchStr)
-    return -1
+    choiceIndex=gg.alert("查询结果太多，请选择搜寻模式", '改变血量', '我不在乎直接修改', '取消')
+    -- 血量查询
+    if choiceIndex == 1 then
+      gg.clearResults()
+      gg.setRanges(4)
+      gg.searchNumber(searchStr, gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
+      search1=gg.getResults(10)
+      if #search1<=0 then
+        gg.alert("查询异常："..searchStr)
+        return -1
+      end
+      gg.searchNumber(input_info[2], gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
+      list={}
+      search2=gg.getResults(1000)
+      for i = 1, #search2 do
+          list[j]={address = search1[i].address,flags = gg.TYPE_DOUBLE,freeze = false,value = input_info[2] + i}
+      end
+      gg.setValues(list)
+      newHPValue=gg.prompt({'请输入最大血量数据'},{[1]=input_info[2]},{[1]='number'})
+      offsetThePointerAddress=offsetThePointer[1]
+      list={}
+      for j=1,#offsetThePointerAddress do
+        list[j]={address = search1[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
+      end
+      gg.setValues(list)
+      gg.addListItems(list)
+      return 
+    elseif choiceIndex == 2 then
+    elseif choiceIndex == 3 then
+        return
+    end
   end
-  list={}
   offsetThePointerAddress=offsetThePointer[offsetThePointerIndex]
   for i = 1, #search2 do
+    list={}
     for j=1,#offsetThePointerAddress do
       list[j]={address = search1[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
     end
