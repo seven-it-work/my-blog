@@ -30,7 +30,8 @@ function Main0()
     "删除历史修改",
   }, nil, "")
   if SN==1 then
-    Main1()
+     Main1()
+   
    elseif SN==2 then
     for i = 1, #userList do
       print(userList[i])
@@ -39,24 +40,25 @@ function Main0()
    elseif SN==3 then
     runHistoryEdit()
    elseif SN==4 then
-    runHistoryEdit()
+    removeHistoryEdit()
   end
   FX1=0
 end
 historyInfo={}
 function removeHistoryEdit()
   multiChoiceOptions={"全选"}
-  for k,v in ipairs(historyInfo) do
-    multiChoiceOptions.insert(k)
+  for k,v in pairs(historyInfo) do
+    table.insert(multiChoiceOptions,k)
   end
   menu = gg.multiChoice(multiChoiceOptions,nil,"这里可以随便写")
+  if meun==nil then return end
   if menu[1]==true then
     historyInfo={}
     gg.toast("删除完成")
     return
   end
-  newHistoryInfo
-  for k,v in ipairs(menu) do
+  newHistoryInfo={}
+  for k,v in pairs(menu) do
     if v ==false then
       newHistoryInfo[k]=historyInfo[k]
     end
@@ -65,21 +67,21 @@ function removeHistoryEdit()
 end
 function runHistoryEdit()
   multiChoiceOptions={"全选"}
-  for k,v in ipairs(historyInfo) do
-    multiChoiceOptions.insert(k)
+  for k,v in pairs(historyInfo) do
+    table.insert(multiChoiceOptions,k)
   end
   menu = gg.multiChoice(multiChoiceOptions,nil,"这里可以随便写")
   if menu == nil then
     return
   end
   if menu[1]==true then
-    for k,v in ipairs(historyInfo) do
+    for k,v in pairs(historyInfo) do
       do_table(v)
     end
     gg.toast("修改完成")
     return
   end
-  for k,v in ipairs(menu) do
+  for k,v in pairs(menu) do
     if v ==true then
       do_table(historyInfo[k])
     end
@@ -107,6 +109,7 @@ function Main1()
     '名称'
   },ggPreSearch,{[1]='number',[2]='number', [3]='number', [4]='number', [5]='number', [6]='number',[7]='text'}
   )
+  if input_info==nil then return end
   ggPreSearch=input_info
   do_table(input_info)
 end
@@ -121,12 +124,12 @@ function do_table(input_info)
   for i = 2, #input_info do
     if i==7 then
       --       名称不查询
-     elseif input_info[i]..'' ~= '0' then
+     elseif input_info[i]..'' ~= '0' and input_info[i]..'' ~='' then
       searchStr=searchStr..';'..input_info[i]
       offsetThePointerIndex=i
     end
   end
-  searchStr=searchStr..':721'
+  searchStr=searchStr..'::'
   if offsetThePointerIndex == 0 then
     gg.alert("没法搜索:"..searchStr)
   end
@@ -156,17 +159,35 @@ function do_table(input_info)
       list={}
       search2=gg.getResults(1000)
       for i = 1, #search2 do
-          list[j]={address = search1[i].address,flags = gg.TYPE_DOUBLE,freeze = false,value = input_info[2] + i}
+          list[i]={address = search2[i].address,flags = gg.TYPE_DOUBLE,freeze = false,value = input_info[2] + i}
       end
       gg.setValues(list)
-      newHPValue=gg.prompt({'请输入最大血量数据'},{[1]=input_info[2]},{[1]='number'})
-      offsetThePointerAddress=offsetThePointer[1]
+ while true do
+  if gg.isVisible(true) then
+    newHPValue=gg.prompt({'请输入最大血量数据'},{[1]=input_info[2]},{[1]='number'})
+    gg.setVisible(false)
+  end
+  if newHPValue == nil then
+  
+      else
+      break
+  end
+end
+      
+     gg.searchNumber(newHPValue[1], gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
+     
+     search2=gg.getResults(10)
+      offsetThePointerAddress=offsetThePointer[5]
+      
+      for i = 1, #search2 do
       list={}
       for j=1,#offsetThePointerAddress do
-        list[j]={address = search1[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
+        list[j]={address = search2[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
       end
       gg.setValues(list)
       gg.addListItems(list)
+      end
+      
       return 
     elseif choiceIndex == 2 then
     elseif choiceIndex == 3 then
@@ -177,7 +198,7 @@ function do_table(input_info)
   for i = 1, #search2 do
     list={}
     for j=1,#offsetThePointerAddress do
-      list[j]={address = search1[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
+      list[j]={address = search2[i].address+offsetThePointerAddress[j],flags = gg.TYPE_DOUBLE,freeze = false,value = modifyTheValue[j]}
     end
     gg.setValues(list)
     gg.addListItems(list)
