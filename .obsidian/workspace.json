@@ -1,43 +1,23 @@
 {
   "main": {
-    "id": "925a5010edbab3da",
+    "id": "04114705206a89ed",
     "type": "split",
     "children": [
       {
-        "id": "0d46c323fdcf4774",
+        "id": "1a29fa34559d9c27",
         "type": "tabs",
         "children": [
           {
-            "id": "9fc53f0c903e05f4",
+            "id": "3c3c315863e027ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/win/Dropit.md",
+                "file": "source/_posts/win/idea/idea安装.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
-            },
-            "group": "f556f5e43e64507a"
-          }
-        ]
-      },
-      {
-        "id": "9f04589d634b1225",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "372a9384f4963597",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/win/Dropit.md",
-                "mode": "source",
-                "source": true
-              }
-            },
-            "group": "f556f5e43e64507a"
+            }
           }
         ]
       }
@@ -45,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f8d4081ff8075f03",
+    "id": "5613843c8c2f7326",
     "type": "split",
     "children": [
       {
-        "id": "7f028c92439c6581",
+        "id": "e22a0053e8d7b918",
         "type": "tabs",
         "children": [
           {
-            "id": "e8fa8fb4c6ebb42e",
+            "id": "5641b1dc7e1d02e6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,7 +43,7 @@
             }
           },
           {
-            "id": "6b0f8bc01c111949",
+            "id": "bddecd2e9673baa1",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -78,7 +58,7 @@
             }
           },
           {
-            "id": "96205130deb73570",
+            "id": "750f0dd1653e7765",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -89,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5
+    "width": 300
   },
   "right": {
-    "id": "0b765798117f76a0",
+    "id": "68e1eae56746e6cd",
     "type": "split",
     "children": [
       {
-        "id": "1e0cf8d48cc180df",
+        "id": "9dc63fef2f27bbb1",
         "type": "tabs",
         "children": [
           {
-            "id": "c9ae16dce3666280",
+            "id": "6b0122de5460ec30",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/win/Dropit.md",
+                "file": "source/_posts/win/idea/idea安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,19 +97,19 @@
             }
           },
           {
-            "id": "a46d0a8d5d572e94",
+            "id": "6c2606ddfad81fa7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/win/Dropit.md",
+                "file": "source/_posts/win/idea/idea安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a60af6c55454e4f4",
+            "id": "6bc5ba0cff2fa1ea",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -140,12 +120,12 @@
             }
           },
           {
-            "id": "6673d73492a77d26",
+            "id": "042beb22a1cc83fe",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/win/Dropit.md"
+                "file": "source/_posts/win/idea/idea安装.md"
               }
             }
           }
@@ -163,38 +143,35 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-stille:Toggle Stille": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "9fc53f0c903e05f4",
+  "active": "5641b1dc7e1d02e6",
   "lastOpenFiles": [
-    "_posts/win/Bulk Rename Utility.md",
-    "_posts/win/Dropit.md",
-    "_posts/win/Snipaste.md",
-    "_posts/win/obsidian/obsidian安装.md",
-    "_posts/win/obsidian/obsidian插件（一）模板使用.md",
-    "obsidianTemplate/hexo-Next Group Pictures.md",
-    "obsidianTemplate/hexo-Next Tips Note.md",
-    "obsidianTemplate/hexo模板.md",
-    "my-todo/index.md",
-    "categories/index.md",
-    "about/index.md",
-    "_posts/win/utools.md",
-    "obsidianTemplate/hexo-Aurora 折叠板.md",
-    "obsidianTemplate/hexo-Aurora 提醒.md",
-    "_posts/win/obsidian/obsidian模板使用.md",
-    "obsidianTemplate/hexo-Aurora 危险.md",
-    "categories",
-    "_data/header.swig",
-    "_data",
-    "随机命名.md",
-    "_posts/win/obsidian/obsidian.md",
-    "_posts/hello-world.md",
-    "obsidianTemplate/index 1.md",
-    "obsidianTemplate",
-    " obsidian-template/hexo模板.md",
-    " obsidian-template/index 1.md",
-    " obsidian-template"
+    "source/_posts/win/Dropit.md",
+    "source/_posts/win/未命名.md",
+    "public/lib/font-awesome/css/all.min.css",
+    "public/lib/font-awesome/webfonts/fa-solid-900.woff2",
+    "public/lib/font-awesome/webfonts/fa-regular-400.woff2",
+    "public/lib/font-awesome/webfonts/fa-brands-400.woff2",
+    "public/categories/win软件/idea/index.html",
+    "public/categories/win软件/Obsidian/index.html",
+    "public/archives/2023/09/index.html",
+    "public/archives/2024/02/index.html",
+    "public/lib/font-awesome/css",
+    "public/lib/font-awesome/webfonts",
+    "public/images/wonderfl/ss9.gif",
+    "public/images/wonderfl/ss8.gif",
+    "public/images/wonderfl/ss7.gif",
+    "public/images/wonderfl/ss6.gif",
+    "public/images/wonderfl/ss5.gif",
+    "public/images/wonderfl/ss4.gif",
+    "public/images/wonderfl/ss3.gif",
+    "public/images/wonderfl/ss2.gif",
+    "public/images/wonderfl/ss1.gif",
+    "public/images/wonderfl/ss0.gif",
+    "source/_posts/win/obsidian/obsidian插件（一）模板使用.md",
+    "source/_posts/win/obsidian/obsidian安装.md",
+    "source/_posts/win/idea/idea安装.md"
   ]
 }

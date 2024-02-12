@@ -34,7 +34,7 @@ var ROOT_URL="{{ config.root }}"
 <!--  <div class="headband"></div>-->
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <!-- 左上角图片 一般节假日什么的 -->
-    <img style="width: auto;position: absolute;top: 0;left: 0;z-index: 9999;" src="{{- url_for('/images/739924dd0dc8e2a37f14d6403cf72acd_134x24.png') }}"/>
+    <!-- <img style="width: auto;position: absolute;top: 0;left: 0;z-index: 9999;" src="{{- url_for('/images/739924dd0dc8e2a37f14d6403cf72acd_134x24.png') }}"/> -->
     <!-- 左上角图片 一般节假日什么的 -->
     <!--   天气组件   -->
     <link type="text/css" rel="stylesheet" href="{{- url_for('/css/wearherWidget.css')}}"/>
@@ -84,10 +84,10 @@ var ROOT_URL="{{ config.root }}"
   </main>
 
   <footer class="footer">
-  <!--  gitHub贡献 日历组件  -->
+  <!--  gitHub贡献 日历组件
     <div id="github_container"></div>
     <script src="{{- url_for('/js/github-calendar/githubcalendar.js') }}"></script>
-  <!--  gitHub贡献 日历组件 -->
+  gitHub贡献 日历组件 -->
 
     <div class="footer-inner">
       {% include '_partials/languages.swig' %}
