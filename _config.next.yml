@@ -31,7 +31,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  style: source/_data/styles.styl
+#  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -177,11 +177,12 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  个人导航: https://gteam_seven.gitee.io/navigation/#/ || fa fa-navigation
+  个人导航: https://gteam_seven.gitee.io/navigation/#/ || iconfont icon-gerenwangzhan
   GitHub: https://github.com/seven-it-work/ || fab fa-github
   E-Mail: mailto:sevenyjl@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   Google: https://plus.google.com/sevenyjl || fab fa-google
+  哔哩哔哩: https://space.bilibili.com/1607124059 || iconfont icon-bilibili
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
