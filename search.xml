@@ -20,39 +20,6 @@
       </categories>
   </entry>
   <entry>
-    <title>重命名神器Bulk Rename Utility</title>
-    <url>/my-blog/fe268b4f/</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Add date&#x2F;time stamps, replace numbers, insert text, convert case, add auto-numbers, process folders and sub-folders….plus a whole lot more!<br>添加日期&#x2F;时间戳、替换数字、插入文本、转换大小写、添加自动编号、处理文件夹和子文件夹……还有更多！</p>
-<ul>
-<li><p><strong>Rename multiple files quickly</strong>, according to many flexible criteria. <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnVsa3JlbmFtZXV0aWxpdHkuY28udWsvI2ZlYXR1cmVz">Learn More<i class="fa fa-external-link-alt"></i></span><br>  根据许多灵活的标准快速重命名多个文件。 了解更多信息</p>
-</li>
-<li><p><strong>Rename files in many ways</strong>: add, replace, insert text into file names. Convert case, add numbers. Remove or change file extensions.<br>  以多种方式重命名文件：添加、替换、在文件名中插入文本。转换大小写，添加数字。删除或更改文件扩展名。</p>
-</li>
-<li><p><strong>Check the detailed preview before renaming.<br>  重命名前请检查详细预览。</strong></p>
-</li>
-<li><p><strong>Rename photos</strong> using EXIF metadata (i.e. “Date Picture Taken”, “Resolution” and other information embedded in all JPG photo files) Rename your holiday pictures from a meaningless dsc1790.jpg to NewYork1.jpg in a flash.<br>  使用 EXIF 元数据重命名照片（即“拍摄日期”、“分辨率”和嵌入在所有 JPG 照片文件中的其他信息） 将您的假期照片从毫无意义的dsc1790.jpg重命名为NewYork1.jpg瞬间。</p>
-</li>
-<li><p><strong>Rename MP3 files</strong> using ID3 tags (a.k.a. MP3 ID3 tag renaming).<br>  使用 ID3 标签重命名 MP3 文件（a.k.a. MP3 ID3 标签重命名）。</p>
-</li>
-<li><p>Rename files using <strong>Windows File Properties</strong> (e.g. media video length, width, height, rate, publisher, etc).<br>  使用 Windows 文件属性重命名文件（例如媒体视频长度、宽度、高度、速率、出版商等）。</p>
-</li>
-<li><p>Change files’ creation and modification time stamps.<br>  更改文件的创建和修改时间戳。</p>
-</li>
-<li><p><strong>Easy to Install</strong>. <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnVsa3JlbmFtZXV0aWxpdHkuY28udWsvRG93bmxvYWQucGhw">Download<i class="fa fa-external-link-alt"></i></span> and start renaming your files now!<br>  易于安装。 立即下载并开始重命名您的文件！</p>
-</li>
-</ul>
-<h1 id="体验心得"><a href="#体验心得" class="headerlink" title="体验心得"></a>体验心得</h1><ol>
-<li>不能对后缀名进行修改</li>
-</ol>
-]]></content>
-      <categories>
-        <category>win软件</category>
-      </categories>
-      <tags>
-        <tag>效率工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Dropit</title>
     <url>/my-blog/72fab0b8/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官网：<span class="exturl" data-url="aHR0cDovL3d3dy5kcm9waXRwcm9qZWN0LmNvbS8=">http://www.dropitproject.com/<i class="fa fa-external-link-alt"></i></span></p>
@@ -86,6 +53,60 @@
       </categories>
       <tags>
         <tag>效率工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重命名神器Bulk Rename Utility</title>
+    <url>/my-blog/fe268b4f/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Add date&#x2F;time stamps, replace numbers, insert text, convert case, add auto-numbers, process folders and sub-folders….plus a whole lot more!<br>添加日期&#x2F;时间戳、替换数字、插入文本、转换大小写、添加自动编号、处理文件夹和子文件夹……还有更多！</p>
+<ul>
+<li><p><strong>Rename multiple files quickly</strong>, according to many flexible criteria. <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnVsa3JlbmFtZXV0aWxpdHkuY28udWsvI2ZlYXR1cmVz">Learn More<i class="fa fa-external-link-alt"></i></span><br>  根据许多灵活的标准快速重命名多个文件。 了解更多信息</p>
+</li>
+<li><p><strong>Rename files in many ways</strong>: add, replace, insert text into file names. Convert case, add numbers. Remove or change file extensions.<br>  以多种方式重命名文件：添加、替换、在文件名中插入文本。转换大小写，添加数字。删除或更改文件扩展名。</p>
+</li>
+<li><p><strong>Check the detailed preview before renaming.<br>  重命名前请检查详细预览。</strong></p>
+</li>
+<li><p><strong>Rename photos</strong> using EXIF metadata (i.e. “Date Picture Taken”, “Resolution” and other information embedded in all JPG photo files) Rename your holiday pictures from a meaningless dsc1790.jpg to NewYork1.jpg in a flash.<br>  使用 EXIF 元数据重命名照片（即“拍摄日期”、“分辨率”和嵌入在所有 JPG 照片文件中的其他信息） 将您的假期照片从毫无意义的dsc1790.jpg重命名为NewYork1.jpg瞬间。</p>
+</li>
+<li><p><strong>Rename MP3 files</strong> using ID3 tags (a.k.a. MP3 ID3 tag renaming).<br>  使用 ID3 标签重命名 MP3 文件（a.k.a. MP3 ID3 标签重命名）。</p>
+</li>
+<li><p>Rename files using <strong>Windows File Properties</strong> (e.g. media video length, width, height, rate, publisher, etc).<br>  使用 Windows 文件属性重命名文件（例如媒体视频长度、宽度、高度、速率、出版商等）。</p>
+</li>
+<li><p>Change files’ creation and modification time stamps.<br>  更改文件的创建和修改时间戳。</p>
+</li>
+<li><p><strong>Easy to Install</strong>. <span class="exturl" data-url="aHR0cHM6Ly93d3cuYnVsa3JlbmFtZXV0aWxpdHkuY28udWsvRG93bmxvYWQucGhw">Download<i class="fa fa-external-link-alt"></i></span> and start renaming your files now!<br>  易于安装。 立即下载并开始重命名您的文件！</p>
+</li>
+</ul>
+<h1 id="体验心得"><a href="#体验心得" class="headerlink" title="体验心得"></a>体验心得</h1><ol>
+<li>不能对后缀名进行修改</li>
+</ol>
+]]></content>
+      <categories>
+        <category>win软件</category>
+      </categories>
+      <tags>
+        <tag>效率工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java版本管理</title>
+    <url>/my-blog/90b6346a/</url>
+    <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>gitHub官网：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1z">https://github.com/ystyle/jvms<i class="fa fa-external-link-alt"></i></span><br>gitHub下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1zL3JlbGVhc2VzL2Rvd25sb2FkL3YyLjEuNi9qdm1zX3YyLjEuNl8zODYuemlw">https://github.com/ystyle/jvms/releases/download/v2.1.6/jvms_v2.1.6_386.zip<i class="fa fa-external-link-alt"></i></span></p>
+<p>gitee：<span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20veXN0eWxlL2p2bXM/X2Zyb209Z2l0ZWVfc2VhcmNo">https://gitee.com/ystyle/jvms?_from=gitee_search<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
+<p>参考的官网</p>
+</blockquote>
+<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p>将解压的jvms.exe放入你自己的文件夹</p>
+<h2 id="创建java版本集合"><a href="#创建java版本集合" class="headerlink" title="创建java版本集合"></a>创建java版本集合</h2><p>在jvms.exe同目录下，创建store文件夹</p>
+<h2 id="java版本加入"><a href="#java版本加入" class="headerlink" title="java版本加入"></a>java版本加入</h2><p>将你已经下载好的java版本复制到 store里面</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>执行命令：jvms.exe init </p>
+<h2 id="版本切换"><a href="#版本切换" class="headerlink" title="版本切换"></a>版本切换</h2><p>查看版本cmd运行命令：jvms list<br>切换版本cmd运行命令：jvms s 版本名称</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>开发必备</tag>
       </tags>
   </entry>
   <entry>
@@ -127,27 +148,6 @@
         <tag>效率工具</tag>
         <tag>新机必装</tag>
         <tag>截图工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java版本管理</title>
-    <url>/my-blog/90b6346a/</url>
-    <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>gitHub官网：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1z">https://github.com/ystyle/jvms<i class="fa fa-external-link-alt"></i></span><br>gitHub下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1zL3JlbGVhc2VzL2Rvd25sb2FkL3YyLjEuNi9qdm1zX3YyLjEuNl8zODYuemlw">https://github.com/ystyle/jvms/releases/download/v2.1.6/jvms_v2.1.6_386.zip<i class="fa fa-external-link-alt"></i></span></p>
-<p>gitee：<span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20veXN0eWxlL2p2bXM/X2Zyb209Z2l0ZWVfc2VhcmNo">https://gitee.com/ystyle/jvms?_from=gitee_search<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
-<p>参考的官网</p>
-</blockquote>
-<h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p>将解压的jvms.exe放入你自己的文件夹</p>
-<h2 id="创建java版本集合"><a href="#创建java版本集合" class="headerlink" title="创建java版本集合"></a>创建java版本集合</h2><p>在jvms.exe同目录下，创建store文件夹</p>
-<h2 id="java版本加入"><a href="#java版本加入" class="headerlink" title="java版本加入"></a>java版本加入</h2><p>将你已经下载好的java版本复制到 store里面</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>执行命令：jvms.exe init </p>
-<h2 id="版本切换"><a href="#版本切换" class="headerlink" title="版本切换"></a>版本切换</h2><p>查看版本cmd运行命令：jvms list<br>切换版本cmd运行命令：jvms s 版本名称</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>开发必备</tag>
       </tags>
   </entry>
   <entry>
