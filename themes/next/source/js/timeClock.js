@@ -51,6 +51,7 @@ window.onload = function () {
   function _updateView(h1, h2, m1, m2, s1, s2) {
 //alert(h1+""+h2+":"+m1+""+m2+":"+s1+""+s2);
     var _url = "http://www.chabudai.org/temp/wonderfl/honehone/img/";
+    var _url = `${CONFIG.root}images/wonderfl/`;
     $('#hour1').css("background-image", "url(" + _url + "h" + h1 + ".gif)");
     $('#hour2').css("background-image", "url(" + _url + "hh" + h2 + ".gif)");
     $('#minute1').css("background-image", "url(" + _url + "m" + m1 + ".gif)");
