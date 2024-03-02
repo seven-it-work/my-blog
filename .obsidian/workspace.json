@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/win/idea/idea安装.md",
+                "file": "source/_posts/win/Java版本管理.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/win/idea/idea安装.md",
+                "file": "source/_posts/win/Java版本管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/win/idea/idea安装.md",
+                "file": "source/_posts/win/Java版本管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/win/idea/idea安装.md"
+                "file": "source/_posts/win/Java版本管理.md"
               }
             }
           }
@@ -148,18 +148,6 @@
   },
   "active": "5641b1dc7e1d02e6",
   "lastOpenFiles": [
-    "source/_posts/win/Dropit.md",
-    "source/_posts/win/未命名.md",
-    "public/lib/font-awesome/css/all.min.css",
-    "public/lib/font-awesome/webfonts/fa-solid-900.woff2",
-    "public/lib/font-awesome/webfonts/fa-regular-400.woff2",
-    "public/lib/font-awesome/webfonts/fa-brands-400.woff2",
-    "public/categories/win软件/idea/index.html",
-    "public/categories/win软件/Obsidian/index.html",
-    "public/archives/2023/09/index.html",
-    "public/archives/2024/02/index.html",
-    "public/lib/font-awesome/css",
-    "public/lib/font-awesome/webfonts",
     "public/images/wonderfl/ss9.gif",
     "public/images/wonderfl/ss8.gif",
     "public/images/wonderfl/ss7.gif",
@@ -170,8 +158,22 @@
     "public/images/wonderfl/ss2.gif",
     "public/images/wonderfl/ss1.gif",
     "public/images/wonderfl/ss0.gif",
+    "public/images/wonderfl/s9.gif",
+    "public/images/wonderfl",
+    "source/_posts/win/Bulk Rename Utility.md",
+    "source/_posts/win/Java版本管理.md",
+    "source/_posts/win/idea/idea安装.md",
+    "source/_posts/win/Dropit.md",
+    "public/lib/font-awesome/css/all.min.css",
+    "public/lib/font-awesome/webfonts/fa-solid-900.woff2",
+    "public/lib/font-awesome/webfonts/fa-regular-400.woff2",
+    "public/lib/font-awesome/webfonts/fa-brands-400.woff2",
+    "public/categories/win软件/idea/index.html",
+    "public/categories/win软件/Obsidian/index.html",
+    "public/archives/2023/09/index.html",
+    "public/archives/2024/02/index.html",
+    "public/lib/font-awesome/css",
     "source/_posts/win/obsidian/obsidian插件（一）模板使用.md",
-    "source/_posts/win/obsidian/obsidian安装.md",
-    "source/_posts/win/idea/idea安装.md"
+    "source/_posts/win/obsidian/obsidian安装.md"
   ]
 }

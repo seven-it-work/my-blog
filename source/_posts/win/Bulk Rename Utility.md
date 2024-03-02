@@ -10,6 +10,7 @@ categories:
 photos:
   - https://www.bulkrenameutility.co.uk/assets/img-bru/bru_main1_sm.png
 ---
+# 介绍
 
 Add date/time stamps, replace numbers, insert text, convert case, add auto-numbers, process folders and sub-folders....plus a whole lot more!  
 添加日期/时间戳、替换数字、插入文本、转换大小写、添加自动编号、处理文件夹和子文件夹......还有更多！
@@ -37,3 +38,7 @@ Add date/time stamps, replace numbers, insert text, convert case, add auto-numbe
     
 - **Easy to Install**. [Download](https://www.bulkrenameutility.co.uk/Download.php) and start renaming your files now!  
     易于安装。 立即下载并开始重命名您的文件！
+
+# 体验心得
+
+1. 不能对后缀名进行修改
