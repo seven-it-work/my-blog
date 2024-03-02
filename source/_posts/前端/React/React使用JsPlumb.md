@@ -1,8 +1,6 @@
 ---
 title: React使用JsPlumb
 description: JsPlumb使用教程，采用React框架，Ts开发
-date: 2023-10-06 11:07:53
-updated: 2023-10-06 11:07:53
 tags:
   - React
   - JsPlumb
@@ -11,7 +9,10 @@ categories:
   - 前端
   - 开发
 photos:
-  - https://jsplumbtoolkit.com/img/home-diagram.png
+  - 'https://jsplumbtoolkit.com/img/home-diagram.png'
+abbrlink: 3005ef78
+date: 2023-10-06 11:07:53
+updated: 2023-10-06 11:07:53
 ---
 
 # 搭建React工程

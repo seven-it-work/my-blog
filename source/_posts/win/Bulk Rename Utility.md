@@ -1,14 +1,15 @@
 ---
 title: 重命名神器Bulk Rename Utility
 description: 批量重命名实用程序允许您根据极其灵活的标准轻松重命名文件和整个文件夹。
-date: 2024-02-12 12:14:51
-updated: 2024-02-12 12:14:51
-tags: 
+tags:
   - 效率工具
-categories: 
+categories:
   - win软件
 photos:
-  - https://www.bulkrenameutility.co.uk/assets/img-bru/bru_main1_sm.png
+  - 'https://www.bulkrenameutility.co.uk/assets/img-bru/bru_main1_sm.png'
+abbrlink: fe268b4f
+date: 2024-02-12 12:14:51
+updated: 2024-02-12 12:14:51
 ---
 # 介绍
 

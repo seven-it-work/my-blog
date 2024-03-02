@@ -1,1 +1,1 @@
-<div>测试一下</div>
+<meta name="referrer" content="no-referrer">

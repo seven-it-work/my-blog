@@ -1,14 +1,16 @@
 ---
 title: Java版本管理
 description: 在Win中管理java版本，方便开发随意切换
-date: 2024-03-02
-updated: 2024-03-02
 tags:
   - 开发必备
 categories:
   - java
 photos:
-  - https://user-images.githubusercontent.com/4478635/168568154-3fef53a4-1660-4b87-b99a-4580bd61ad0d.png
+  - >-
+    https://user-images.githubusercontent.com/4478635/168568154-3fef53a4-1660-4b87-b99a-4580bd61ad0d.png
+abbrlink: 90b6346a
+date: 2024-03-02 00:00:00
+updated: 2024-03-02 00:00:00
 ---
 
 # 下载地址

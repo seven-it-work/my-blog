@@ -1,16 +1,21 @@
 ---
 title: Dropit
-description: 当您需要组织文件时，DropIt 可以消除搜索和手动打开文件夹以及移动文件的大部分苦差事。将一组不同的文件和文件夹放在浮动的 DropIt 图像上，然后将它们排序到定义的目标文件夹、压缩或提取它们、使用相关程序打开它们或执行其他定义的操作。您可以定义如何筛选文件（按名称、目录、大小、日期、属性、内容、正则表达式）并关联要执行的 21 个可用操作之一（移动、复制、压缩、提取、重命名、删除、拆分、联接、加密、解密、打开方式、打印、上传、通过邮件发送、创建图库、创建列表、创建播放列表、创建快捷方式、复制到剪贴板、更改属性和忽略）。您还可以在配置文件中组织关联，并按定义的时间间隔自动扫描受监控的文件夹以处理包含的文件。
-date: 2024-02-12 12:11:09
-updated: 2024-02-12 12:11:09
-tags: 
+description: >-
+  当您需要组织文件时，DropIt 可以消除搜索和手动打开文件夹以及移动文件的大部分苦差事。将一组不同的文件和文件夹放在浮动的 DropIt
+  图像上，然后将它们排序到定义的目标文件夹、压缩或提取它们、使用相关程序打开它们或执行其他定义的操作。您可以定义如何筛选文件（按名称、目录、大小、日期、属性、内容、正则表达式）并关联要执行的
+  21
+  个可用操作之一（移动、复制、压缩、提取、重命名、删除、拆分、联接、加密、解密、打开方式、打印、上传、通过邮件发送、创建图库、创建列表、创建播放列表、创建快捷方式、复制到剪贴板、更改属性和忽略）。您还可以在配置文件中组织关联，并按定义的时间间隔自动扫描受监控的文件夹以处理包含的文件。
+tags:
   - 效率工具
-categories: 
+categories:
   - win软件
 photos:
-- http://www.dropitproject.com/screenshots/05.jpg
-- http://www.dropitproject.com/screenshots/01.jpg
-- http://www.dropitproject.com/screenshots/02.jpg
+  - 'http://www.dropitproject.com/screenshots/05.jpg'
+  - 'http://www.dropitproject.com/screenshots/01.jpg'
+  - 'http://www.dropitproject.com/screenshots/02.jpg'
+abbrlink: 72fab0b8
+date: 2024-02-12 12:11:09
+updated: 2024-02-12 12:11:09
 ---
 
 # 安装
