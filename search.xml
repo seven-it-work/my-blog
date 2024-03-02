@@ -89,6 +89,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Snipaste</title>
+    <url>/my-blog/108dcde3/</url>
+    <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>官网地址：<span class="exturl" data-url="aHR0cHM6Ly96aC5zbmlwYXN0ZS5jb20v">https://zh.snipaste.com/<i class="fa fa-external-link-alt"></i></span><br>64位beta版：<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5zbmlwYXN0ZS5jb20vYXJjaGl2ZXMvU25pcGFzdGUtMi44LjYtQmV0YS14NjQuemlw">https://download.snipaste.com/archives/Snipaste-2.8.6-Beta-x64.zip<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>截图F1<br>截图完成后按F3，进行贴图</p>
+<ul>
+<li>支持将剪贴板中的以下内容转为图片<ul>
+<li>图像</li>
+<li>纯文本</li>
+<li>HTML 文本</li>
+<li>颜色信息</li>
+<li>图像文件：PNG, JPG, BMP, ICO, <strong>GIF</strong> 等</li>
+</ul>
+</li>
+<li>图片窗口支持的操作<ul>
+<li>缩放 (<code>鼠标滚轮</code> 或者 <code>+</code>&#x2F;<code>-</code>)<br>  对于 GIF 图片则是加速&#x2F;减速</li>
+<li>旋转 (<code>1</code>&#x2F;<code>2</code>)<br>  对于 GIF 图片则是 上一帧&#x2F;下一帧</li>
+<li>镜像翻转 (<code>3</code>&#x2F;<code>4</code>)</li>
+<li>设置透明度 (<code>Ctrl</code> + <code>鼠标滚轮</code> 或者 <code>Ctrl</code> + <code>+</code>&#x2F;<code>-</code>)</li>
+<li>鼠标穿透</li>
+<li>缩略图 (<code>Shift</code> + <code>双击</code>)</li>
+<li>图像标注 (<code>空格键</code>)</li>
+<li>隐藏 (<code>左键双击</code>)</li>
+<li>…</li>
+</ul>
+</li>
+<li>取色 (<code>Alt</code>)</li>
+<li>文件拖放</li>
+<li><strong>贴图分组</strong></li>
+<li><strong>自动备份、恢复</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>win软件</category>
+      </categories>
+      <tags>
+        <tag>效率工具</tag>
+        <tag>新机必装</tag>
+        <tag>截图工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java版本管理</title>
     <url>/my-blog/90b6346a/</url>
     <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>gitHub官网：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1z">https://github.com/ystyle/jvms<i class="fa fa-external-link-alt"></i></span><br>gitHub下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lzdHlsZS9qdm1zL3JlbGVhc2VzL2Rvd25sb2FkL3YyLjEuNi9qdm1zX3YyLjEuNl8zODYuemlw">https://github.com/ystyle/jvms/releases/download/v2.1.6/jvms_v2.1.6_386.zip<i class="fa fa-external-link-alt"></i></span></p>
@@ -144,47 +185,6 @@
       </categories>
       <tags>
         <tag>开发必备</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Snipaste</title>
-    <url>/my-blog/108dcde3/</url>
-    <content><![CDATA[<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>官网地址：<span class="exturl" data-url="aHR0cHM6Ly96aC5zbmlwYXN0ZS5jb20v">https://zh.snipaste.com/<i class="fa fa-external-link-alt"></i></span><br>64位beta版：<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5zbmlwYXN0ZS5jb20vYXJjaGl2ZXMvU25pcGFzdGUtMi44LjYtQmV0YS14NjQuemlw">https://download.snipaste.com/archives/Snipaste-2.8.6-Beta-x64.zip<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>截图F1<br>截图完成后按F3，进行贴图</p>
-<ul>
-<li>支持将剪贴板中的以下内容转为图片<ul>
-<li>图像</li>
-<li>纯文本</li>
-<li>HTML 文本</li>
-<li>颜色信息</li>
-<li>图像文件：PNG, JPG, BMP, ICO, <strong>GIF</strong> 等</li>
-</ul>
-</li>
-<li>图片窗口支持的操作<ul>
-<li>缩放 (<code>鼠标滚轮</code> 或者 <code>+</code>&#x2F;<code>-</code>)<br>  对于 GIF 图片则是加速&#x2F;减速</li>
-<li>旋转 (<code>1</code>&#x2F;<code>2</code>)<br>  对于 GIF 图片则是 上一帧&#x2F;下一帧</li>
-<li>镜像翻转 (<code>3</code>&#x2F;<code>4</code>)</li>
-<li>设置透明度 (<code>Ctrl</code> + <code>鼠标滚轮</code> 或者 <code>Ctrl</code> + <code>+</code>&#x2F;<code>-</code>)</li>
-<li>鼠标穿透</li>
-<li>缩略图 (<code>Shift</code> + <code>双击</code>)</li>
-<li>图像标注 (<code>空格键</code>)</li>
-<li>隐藏 (<code>左键双击</code>)</li>
-<li>…</li>
-</ul>
-</li>
-<li>取色 (<code>Alt</code>)</li>
-<li>文件拖放</li>
-<li><strong>贴图分组</strong></li>
-<li><strong>自动备份、恢复</strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>win软件</category>
-      </categories>
-      <tags>
-        <tag>效率工具</tag>
-        <tag>新机必装</tag>
-        <tag>截图工具</tag>
       </tags>
   </entry>
   <entry>

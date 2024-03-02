@@ -1190,7 +1190,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #01ff71;
+  background: #26fffa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2419,7 +2419,7 @@ embed {
   white-space: nowrap;
 }
 /* 侧边栏图标格式设置 */
-.fa-bilibili {
+.bilibili {
   background-image: url("https://gitee.com/GTeam_seven/drawing-bed/raw/master/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/bilibili.svg");
   background-size: 1em 1em;
   opacity: 0.55;
@@ -2430,10 +2430,10 @@ embed {
   border-radius: 0rem;
 /*鼠标停留在图标上时，图标呈现发光效果*/
 }
-.fa-bilibili:hover {
+.bilibili:hover {
   opacity: 1;
 }
-.fa-navigation {
+.navigation {
   background-image: url("https://gitee.com/GTeam_seven/drawing-bed/raw/master/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/navigation.svg");
   background-size: 1em 1em;
   opacity: 0.55;
@@ -2444,6 +2444,6 @@ embed {
   border-radius: 0rem;
 /*鼠标停留在图标上时，图标呈现发光效果*/
 }
-.fa-navigation:hover {
+.navigation:hover {
   opacity: 1;
 }
