@@ -18,3 +18,5 @@ git push
 
 pause
 
+exit
+
