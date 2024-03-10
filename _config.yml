@@ -106,10 +106,12 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-#  repo: git@github.com:seven-it-work/my-blog.git
-  repo: git@gitee.com:GTeam_seven/my-blog.git
-  branch: hexo-page
+  - type: git
+    repo: git@gitee.com:GTeam_seven/my-blog.git
+    branch: hexo-page
+  - type: git
+    repo: git@github.com:seven-it-work/my-blog.git
+    branch: hexo-page
 
 live2d:
   enable: true
